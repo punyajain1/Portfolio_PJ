@@ -1,0 +1,75 @@
+const experiences = [
+  {
+    company: "Starportal",
+    positions: [
+      {
+        title: "Frontend Developer Intern",
+        type: "Freelance",
+        period: "May 2025—June 2025",
+        current: false,
+        description: [
+          "Developed the frontend for a fast-paced startup using React, TypeScript, and Framer Motion to deliver a smooth, responsive user experience",
+          "Implemented interactive UI components, micro-animations, and dynamic layouts to enhance user engagement",
+          "Worked closely with the CEO and design team to build pixel-perfect, performant interfaces aligned with the brand vision",
+          "Redesigned the entire frontend architecture to improve user experience and performance"
+        ],
+        technologies: [
+          "Next.js", "shadcn/ui", "TypeScript", "Tailwind CSS", "Framer Motion",  "GitHub"
+        ]
+      }
+    ]
+  }
+];
+
+export default function Experience() {
+  return (
+    <section className="mb-12">
+      <h2 className="text-xl font-bold mb-6">Experience</h2>
+      
+      <div className="space-y-8">
+        {experiences.map((exp) => (
+          <div key={exp.company} className="space-y-4">
+            <h3 className="text-lg font-semibold">{exp.company}</h3>
+            {exp.positions.map((position, index) => (
+              <div key={index} className="ml-4 border-l-2 border-gray-200 pl-4 space-y-2">
+                <div className="flex items-center gap-2">
+                  <h4 className="font-medium">{position.title}</h4>
+                  {position.current && (
+                    <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">
+                      Current
+                    </span>
+                  )}
+                </div>
+                <div className="text-sm text-zinc-600 space-y-1">
+                  <p><strong>Employment Type:</strong> {position.type}</p>
+                  <p><strong>Employment Period:</strong> {position.period}</p>
+                </div>
+                
+                {position.description.length > 0 && (
+                  <ul className="text-sm text-zinc-700 space-y-1 list-disc list-inside">
+                    {position.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                
+                {position.technologies.length > 0 && (
+                  <div className="flex flex-wrap gap-1 mt-3">
+                    {position.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
