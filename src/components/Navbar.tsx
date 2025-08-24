@@ -36,28 +36,58 @@ const Navbar = () => {
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] text-black dark:text-[#f0f6fc]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-8 py-6">
-            <div className="flex justify-end items-center gap-4">
-              {/* Theme toggle button */}
-              <button
-                onClick={toggleDarkMode}
-                className="p-3 rounded-full bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors duration-200"
-                aria-label="Toggle theme"
-              >
-                {isDarkMode ? (
-                  <Sun className="w-5 h-5 text-gray-700 dark:text-[#f0f6fc]" />
-                ) : (
-                  <Moon className="w-5 h-5 text-gray-700 dark:text-[#f0f6fc]" />
-                )}
-              </button>
+            <div className="flex justify-between items-center">
+              {/* Navigation links */}
+              <nav className="flex items-center space-x-8">
+                <button
+                  onClick={() => scrollToSection('experience')}
+                  className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] hover:text-black dark:hover:text-white transition-all duration-200 relative group"
+                >
+                  Experience
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white group-hover:w-full transition-all duration-200"></span>
+                </button>
+                
+                <button
+                  onClick={() => scrollToSection('stack')}
+                  className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] hover:text-black dark:hover:text-white transition-all duration-200 relative group"
+                >
+                  Skills
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white group-hover:w-full transition-all duration-200"></span>
+                </button>
+                
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] hover:text-black dark:hover:text-white transition-all duration-200 relative group"
+                >
+                  Contact
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black dark:bg-white group-hover:w-full transition-all duration-200"></span>
+                </button>
+              </nav>
 
-              {/* Coffee button */}
-              <button
-                onClick={handleCoffeeClick}
-                className="p-3 rounded-full bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors duration-200"
-                aria-label="Buy me a coffee"
-              >
-                <Coffee className="w-5 h-5 text-amber-600" />
-              </button>
+              {/* Action buttons */}
+              <div className="flex items-center gap-4">
+                {/* Theme toggle button */}
+                <button
+                  onClick={toggleDarkMode}
+                  className="p-3 rounded-full bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors duration-200"
+                  aria-label="Toggle theme"
+                >
+                  {isDarkMode ? (
+                    <Sun className="w-5 h-5 text-gray-700 dark:text-[#f0f6fc]" />
+                  ) : (
+                    <Moon className="w-5 h-5 text-gray-700 dark:text-[#f0f6fc]" />
+                  )}
+                </button>
+
+                {/* Coffee button */}
+                <button
+                  onClick={handleCoffeeClick}
+                  className="p-3 rounded-full bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors duration-200"
+                  aria-label="Buy me a coffee"
+                >
+                  <Coffee className="w-5 h-5 text-black dark:text-[#f0f6fc]" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
