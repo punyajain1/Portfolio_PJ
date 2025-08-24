@@ -42,7 +42,7 @@ const databases = [
 export default function Stack() {
   const renderTechSection = (title: string, technologies: { name: string; url: string }[]) => (
     <div className="mb-6">
-      <h3 className="text-lg font-semibold mb-3 text-gray-700">{title}</h3>
+      <h3 className="text-lg font-semibold mb-3 text-gray-700 dark:text-[#f0f6fc]">{title}</h3>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech) => (
           <a
@@ -50,7 +50,7 @@ export default function Stack() {
             href={tech.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+            className="inline-flex items-center px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-[#21262d] dark:hover:bg-[#30363d] dark:text-[#f0f6fc] rounded-full transition-colors"
           >
             {tech.name}
           </a>
@@ -61,7 +61,7 @@ export default function Stack() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-xl font-bold mb-6">Stack</h2>
+      <h2 className="text-xl font-bold mb-6 text-black dark:text-[#f0f6fc]">Stack</h2>
       
       {renderTechSection("Programming Languages", programmingLanguages)}
       {renderTechSection("Frameworks & Libraries", frameworksAndLibraries)}

@@ -7,7 +7,7 @@ export default function Projects() {
 
   return (
     <section className="mb-12">
-      <h2 className="text-xl font-bold mb-6">Projects({projects.length})</h2>
+      <h2 className="text-xl font-bold mb-6 text-black dark:text-[#f0f6fc]">Projects({projects.length})</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {displayedProjects.map((project) => (
@@ -26,7 +26,7 @@ export default function Projects() {
         <div className="flex justify-center mt-8">
           <Link
             href="/projects"
-            className="px-6 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            className="px-6 py-2 bg-gray-100 text-gray-800 dark:bg-[#21262d] dark:text-[#f0f6fc] rounded-lg hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors font-medium"
           >
             View All Projects ({projects.length})
           </Link>

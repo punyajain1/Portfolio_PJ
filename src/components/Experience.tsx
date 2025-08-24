@@ -24,29 +24,29 @@ const experiences = [
 export default function Experience() {
   return (
     <section className="mb-12">
-      <h2 className="text-xl font-bold mb-6">Experience</h2>
+      <h2 className="text-xl font-bold mb-6 text-black dark:text-[#f0f6fc]">Experience</h2>
       
       <div className="space-y-8">
         {experiences.map((exp) => (
           <div key={exp.company} className="space-y-4">
-            <h3 className="text-lg font-semibold">{exp.company}</h3>
+            <h3 className="text-lg font-semibold text-black dark:text-[#f0f6fc]">{exp.company}</h3>
             {exp.positions.map((position, index) => (
-              <div key={index} className="ml-4 border-l-2 border-gray-200 pl-4 space-y-2">
+              <div key={index} className="ml-4 border-l-2 border-gray-200 dark:border-[#30363d] pl-4 space-y-2">
                 <div className="flex items-center gap-2">
-                  <h4 className="font-medium">{position.title}</h4>
+                  <h4 className="font-medium text-black dark:text-[#f0f6fc]">{position.title}</h4>
                   {position.current && (
-                    <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">
+                    <span className="px-2 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-full">
                       Current
                     </span>
                   )}
                 </div>
-                <div className="text-sm text-zinc-600 space-y-1">
+                <div className="text-sm text-zinc-600 dark:text-[#8b949e] space-y-1">
                   <p><strong>Employment Type:</strong> {position.type}</p>
                   <p><strong>Employment Period:</strong> {position.period}</p>
                 </div>
                 
                 {position.description.length > 0 && (
-                  <ul className="text-sm text-zinc-700 space-y-1 list-disc list-inside">
+                  <ul className="text-sm text-zinc-700 dark:text-[#8b949e] space-y-1 list-disc list-inside">
                     {position.description.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -58,7 +58,7 @@ export default function Experience() {
                     {position.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded"
+                        className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded"
                       >
                         {tech}
                       </span>

@@ -12,14 +12,14 @@ const education = [
 export default function Education() {
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6">Education</h2>
+      <h2 className="text-2xl font-bold mb-6 text-black dark:text-[#f0f6fc]">Education</h2>
       
       <div className="space-y-4">
         {education.map((edu, index) => (
-          <div key={index} className="ml-4 border-l-2 border-gray-100 pl-4 space-y-2">
-            <h4 className="font-bold text-lg">{edu.institution}</h4>
-            <p className="text-md font-medium text-zinc-900">{edu.degree}</p>
-            <div className="text-sm text-zinc-600 space-y-1">
+          <div key={index} className="ml-4 border-l-2 border-gray-100 dark:border-[#30363d] pl-4 space-y-2">
+            <h4 className="font-bold text-lg text-black dark:text-[#f0f6fc]">{edu.institution}</h4>
+            <p className="text-md font-medium text-zinc-900 dark:text-[#f0f6fc]">{edu.degree}</p>
+            <div className="text-sm text-zinc-600 dark:text-[#8b949e] space-y-1">
               <p><strong>Period:</strong> {edu.period}</p>
               <p><strong>Expected Graduation:</strong> {edu.expectedGraduation}</p>
               <p><strong>CGPA:</strong> {edu.cgpa}</p>

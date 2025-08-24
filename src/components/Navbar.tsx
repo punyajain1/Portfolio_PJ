@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Coffee } from 'lucide-react';
+import { Coffee, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/context/ThemeContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,31 +17,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // useEffect(() => {
-  //   // Check for saved theme preference or default to light mode
-  //   const savedTheme = localStorage.getItem('theme');
-  //   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  //   
-  //   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-  //     setIsDarkMode(true);
-  //     document.documentElement.classList.add('dark');
-  //   } else {
-  //     setIsDarkMode(false);
-  //     document.documentElement.classList.remove('dark');
-  //   }
-  // }, []);
-
-  // const toggleDarkMode = () => {
-  //   setIsDarkMode(!isDarkMode);
-  //   if (!isDarkMode) {
-  //     document.documentElement.classList.add('dark');
-  //     localStorage.setItem('theme', 'dark');
-  //   } else {
-  //     document.documentElement.classList.remove('dark');
-  //     localStorage.setItem('theme', 'light');
-  //   }
-  // };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -57,27 +33,27 @@ const Navbar = () => {
   return (
     <>
       {/* Static navbar section */}
-      <section className="w-full border-t border-b border-gray-200 bg-white text-black">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200">
+      <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] text-black dark:text-[#f0f6fc]">
+        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-8 py-6">
             <div className="flex justify-end items-center gap-4">
-              {/* Theme toggle button - commented out for now */}
-              {/* <button
+              {/* Theme toggle button */}
+              <button
                 onClick={toggleDarkMode}
-                className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                className="p-3 rounded-full bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors duration-200"
                 aria-label="Toggle theme"
               >
                 {isDarkMode ? (
-                  <Sun className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                  <Sun className="w-5 h-5 text-gray-700 dark:text-[#f0f6fc]" />
                 ) : (
-                  <Moon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+                  <Moon className="w-5 h-5 text-gray-700 dark:text-[#f0f6fc]" />
                 )}
-              </button> */}
+              </button>
 
               {/* Coffee button */}
               <button
                 onClick={handleCoffeeClick}
-                className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+                className="p-3 rounded-full bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] transition-colors duration-200"
                 aria-label="Buy me a coffee"
               >
                 <Coffee className="w-5 h-5 text-amber-600" />
@@ -97,50 +73,50 @@ const Navbar = () => {
                 : 'opacity-0 translate-y-[-20px] pointer-events-none'
             }`}
           >
-            <nav className="px-6 py-3 rounded-full bg-white/80 backdrop-blur-md shadow-lg border border-gray-200/50">
+            <nav className="px-6 py-3 rounded-full bg-white/80 dark:bg-[#21262d]/80 backdrop-blur-md shadow-lg border border-gray-200/50 dark:border-[#30363d]/50">
               <div className="flex items-center gap-6">
                 {/* Navigation links */}
                 <button
                   onClick={() => scrollToSection('experience')}
-                  className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 >
                   Experience
                 </button>
                 
                 <button
                   onClick={() => scrollToSection('stack')}
-                  className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 >
                   Skills
                 </button>
                 
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-700 dark:text-[#f0f6fc] hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 >
                   Contact
                 </button>
 
                 {/* Divider */}
-                <div className="w-px h-4 bg-gray-300"></div>
+                <div className="w-px h-4 bg-gray-300 dark:bg-[#30363d]"></div>
 
-                {/* Theme toggle button (smaller) - commented out for now */}
-                {/* <button
+                {/* Theme toggle button (smaller) */}
+                <button
                   onClick={toggleDarkMode}
-                  className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+                  className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-[#30363d] transition-colors duration-200"
                   aria-label="Toggle theme"
                 >
                   {isDarkMode ? (
-                    <Sun className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                    <Sun className="w-4 h-4 text-gray-700 dark:text-[#f0f6fc]" />
                   ) : (
-                    <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                    <Moon className="w-4 h-4 text-gray-700 dark:text-[#f0f6fc]" />
                   )}
-                </button> */}
+                </button>
 
                 {/* Coffee button (smaller) */}
                 <button
                   onClick={handleCoffeeClick}
-                  className="p-2 rounded-full hover:bg-gray-100 transition-colors duration-200"
+                  className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-[#30363d] transition-colors duration-200"
                   aria-label="Buy me a coffee"
                 >
                   <Coffee className="w-4 h-4 text-amber-600" />

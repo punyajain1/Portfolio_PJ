@@ -5,6 +5,7 @@ export { default as Experience } from './Experience';
 export { default as Education } from './Education';
 export { default as Projects } from './Projects';
 export { default as ProjectCard } from './ProjectCard';
+export { default as ProjectDetailClient } from './ProjectDetailClient';
 export { default as Resume } from './Resume';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
