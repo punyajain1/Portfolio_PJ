@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent mx-auto"></div>
           
           <div className="font-typewriter text-sm tracking-widest text-gray-500 dark:text-gray-400 uppercase">
-            Let's create something amazing
+            Let&apos;s create something amazing
           </div>
           
           <div className="flex items-center justify-center space-x-8">

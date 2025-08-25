@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { GitHubLight, GitHubDark } from '../../icons/github';
 import { LinkedinLight, LinkedinDark } from '../../icons/linkedin';
 import { Xdark, Xlight } from '../../icons/x';
@@ -32,7 +33,7 @@ export default function Header() {
     <header className="mb-12">
       <div className="flex items-center gap-6 mb-8">
         <div className="w-32 h-32 bg-gray-200 dark:bg-[#21262d] rounded-full overflow-hidden flex-shrink-0">
-          <img src="/punya.jpg" alt="Punya" className="w-full h-full object-cover" />
+          <Image src="/punya.jpg" alt="Punya" width={128} height={128} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1">
           <h1 className="text-3xl font-bold text-zinc-900 dark:text-[#f0f6fc] mb-2">Hi!! Punya Here</h1>

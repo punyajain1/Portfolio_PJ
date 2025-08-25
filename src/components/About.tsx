@@ -5,7 +5,7 @@ export default function About() {
       
       <div className="space-y-4 text-zinc-700 dark:text-[#8b949e] leading-relaxed">
         <p>
-          Hello World!, I'm Punya! A CS Grad passionate about creating high-performance,
+          Hello World!, I&apos;m Punya! A CS Grad passionate about creating high-performance,
           user-centric software solutions with intuitive and engaging designs. I am
           building impactful solutions and contributing to the developer community.
         </p>
@@ -22,13 +22,13 @@ export default function About() {
         </p>
         
         <p>
-          When I’m not coding, you’ll probably find me doing random stuff like trying out new recipes, or just going out to touch grass and reset my brain.
-          I'm always open to collaborating on open-source projects and exploring new
+          When I&apos;m not coding, you&apos;ll probably find me doing random stuff like trying out new recipes, or just going out to touch grass and reset my brain.
+          I&apos;m always open to collaborating on open-source projects and exploring new
           opportunities.
         </p>
         
         <p className="font-medium text-zinc-900 dark:text-[#f0f6fc]">
-          Let's connect and collaborate to build something amazing together!
+          Let&apos;s connect and collaborate to build something amazing together!
         </p>
       </div>
     </section>

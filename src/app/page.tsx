@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import {
   Header,
   About,
@@ -33,7 +34,7 @@ export default function Home() {
                   backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
                   backgroundSize: '15px 15px',
                   backgroundAttachment: 'fixed'}}></div>
-              <img src={head_img} alt="PJ" className="w-6/12 h-42 rounded-lg shadow-lg relative z-10" />
+              <Image src={head_img} alt="PJ" width={200} height={168} className="w-6/12 h-42 rounded-lg shadow-lg relative z-10" />
             </div>
           </div>
         </div>

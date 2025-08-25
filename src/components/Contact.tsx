@@ -5,7 +5,7 @@ export default function Contact() {
       
       <div className="border border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] rounded-lg p-6">
         <p className="text-zinc-700 dark:text-[#8b949e] mb-6">
-          Got a project in mind you'd like to see come to life? I'm always excited to
+          Got a project in mind you&apos;d like to see come to life? I&apos;m always excited to
           explore new ideas.
         </p>
         
