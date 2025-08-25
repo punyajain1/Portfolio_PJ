@@ -163,7 +163,7 @@ export default function Home() {
       {/* Footer Section */}
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-8 py-12">
+          <div className="max-w-4xl mx-auto px-2 py-6">
             <Footer />
           </div>
         </div>

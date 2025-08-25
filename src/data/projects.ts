@@ -76,7 +76,7 @@ export const projects: Project[] = [
     thumbnail: "/thumbnails/Brainly.png",
     links: {
       visit: "https://www.youtube.com/watch?v=CCVkD4rmuv8",
-      source: "https://github.com/punyajain1/brainly-frontend"+ " https://github.com/punyajain1/brainly-backend"
+      source: "https://github.com/punyajain1/brainly-frontend"
     }
   },
   {

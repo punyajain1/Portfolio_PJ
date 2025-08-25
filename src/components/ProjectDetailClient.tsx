@@ -1,9 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useTheme } from '../context/ThemeContext';
-import Navbar from './Navbar';
 
 interface Project {
   slug: string;
@@ -29,24 +27,26 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
   const { isDarkMode } = useTheme();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0d1117] transition-colors duration-200">
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
+    <div className="h-full" style={{
+        backgroundImage: isDarkMode 
+          ? 'radial-gradient(circle, rgba(209, 213, 219, 0.3) 1px, transparent 1px)' 
+          : 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
         backgroundSize: '15px 15px',
         backgroundAttachment: 'fixed'
-      }}></div>
+    }}>
       
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <div className="bg-white dark:bg-[#161b22] rounded-xl border border-gray-200 dark:border-[#30363d] shadow-lg p-8">
         {/* Back button */}
-        <Link 
-          href="/#projects" 
+        <button 
+          onClick={() => window.history.back()}
           className="inline-flex items-center text-zinc-600 dark:text-[#8b949e] hover:text-zinc-900 dark:hover:text-[#f0f6fc] mb-8 transition-colors"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-          Back to projects
-        </Link>
+          Back
+        </button>
 
         {/* Project header */}
         <div className="mb-8">
@@ -156,6 +156,7 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
             </div>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

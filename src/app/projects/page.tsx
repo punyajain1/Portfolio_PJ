@@ -9,15 +9,15 @@ export default function ProjectsPage() {
   const { isDarkMode } = useTheme();
   
   return (
-    <div className="min-h-full bg-white dark:bg-[#0d1117] transition-colors duration-200">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-90 dark:opacity-10" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
+    <div className="min-h-full bg-gray-50 dark:bg-[#0d1117] transition-colors duration-200" style={{
+      backgroundImage: isDarkMode 
+        ? 'radial-gradient(circle, rgba(209, 213, 219, 0.3) 1px, transparent 1px)' 
+        : 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
+      backgroundSize: '15px 15px',
+      backgroundAttachment: 'fixed'
+    }}>
       
-      {/* Content with background overlay for better visibility */}
+      {/* Content */}
       <div className="relative z-10">
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Header section with background for better visibility */}

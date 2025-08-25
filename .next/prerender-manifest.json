@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/projects/intelliguide":{},"/projects/ai-mail-agent":{},"/projects/ai-rag-agent":{},"/projects/brainly":{},"/projects/chess":{},"/projects/chat-sphere":{},"/projects/bolt-clone":{}},"dynamicRoutes":{"/projects/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/projects/[slug]","routeRegex":"^\\/projects\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"13d5538f64db5f896e8101757dd4cd5b","previewModeSigningKey":"c244e2708ebbb4831e5640ea596ea8fd54dddfffcd952f876f7b5508c9a66c54","previewModeEncryptionKey":"43a6bedfa9e784df80f20cc9fa0deb16922ebe0b0bb8e2705d65d3d2e5a61166"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "dd8c5900f50ff41d9b3e1f9e555c91ff",
+    "previewModeSigningKey": "3207c82f861992a24b76c562753f3cbc6143eae98be067a7a3b97eddccf355b9",
+    "previewModeEncryptionKey": "fac0f8b4f02f1a666148375f3936bd444601ea1df5b0e75fc7bb118f759f04a1"
+  }
+}

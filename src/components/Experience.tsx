@@ -18,7 +18,7 @@ const experiences = [
         ]
       }
     ]
-  }
+  },
 ];
 
 export default function Experience() {

@@ -1,10 +1,48 @@
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleGetInTouch = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="border-t border-gray-200 dark:border-[#30363d] pt-8 text-center">
-      <h3 className="text-2xl font-bold mb-4 text-black dark:text-[#f0f6fc]">PUNYA</h3>
-      <button className="text-sm text-blue-600 dark:text-[#58a6ff] hover:underline">
-        Get in touch
-      </button>
+    <footer className="">
+      <div className="max-w-4xl">
+        {/* Main content */}
+        <div className="text-center space-y-2">
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent mx-auto"></div>
+          
+          <div className="font-typewriter text-sm tracking-widest text-gray-500 dark:text-gray-400 uppercase">
+            Let's create something amazing
+          </div>
+          
+          <div className="flex items-center justify-center space-x-8">
+            <button 
+              onClick={handleGetInTouch}
+              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 font-medium tracking-wide"
+            >
+              Get in touch
+            </button>
+            <button 
+              onClick={scrollToTop}
+              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200 font-medium tracking-wide"
+            >
+              ↑ Back to top
+            </button>
+          </div>
+          
+          <div className="flex items-center justify-center space-x-3">
+            <div className="w-1 h-1 bg-gray-400 dark:bg-gray-500 rounded-full"></div>
+            <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">2025</span>
+            <div className="w-1 h-1 bg-gray-400 dark:bg-gray-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
