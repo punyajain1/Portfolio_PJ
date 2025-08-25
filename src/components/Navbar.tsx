@@ -69,7 +69,7 @@ const Navbar = () => {
                   aria-label="Toggle theme"
                 >
                   {isDarkMode ? (
-                    <Sun className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 dark:text-[#f0f6fc]" />
+                    <Sun className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 dark:text-yellow-400" />
                   ) : (
                     <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 dark:text-[#f0f6fc]" />
                   )}
@@ -188,7 +188,7 @@ const Navbar = () => {
                   aria-label="Toggle theme"
                 >
                   {isDarkMode ? (
-                    <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-700 dark:text-[#f0f6fc]" />
+                    <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-500 dark:text-yellow-400" />
                   ) : (
                     <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-700 dark:text-[#f0f6fc]" />
                   )}
