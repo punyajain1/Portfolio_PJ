@@ -5,6 +5,11 @@ import { ThemeProvider } from '@/context/ThemeContext'
 export const metadata: Metadata = {
   title: 'Punya Jain - Portfolio',
   description: 'Portfolio website showcasing my work and experience',
+  icons: {
+    icon: '/punya.jpg',
+    shortcut: '/punya.jpg',
+    apple: '/punya.jpg',
+  },
 }
 
 export default function RootLayout({
