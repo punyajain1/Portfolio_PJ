@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     title: "Intelliguide – AI-Powered Codeforces Profile Analyzer",
     slug: "intelliguide",
-    period: "January 2025",
+    period: "January, 2025 - ∞",
     description: "A Smart AI powered Codeforces profile analyzer.",
     longDescription: ["Over 600 usages and 400+ new users in 48 hours.","Integrated Codeforces and OpenAI APIs to generate personalized skill enhancement strategies and automated","performance insights, streamlining manual analysis tasks by 90%","Developed full-stack platform with Next.js, MongoDB, and Tailwind CSS, delivering cross-device responsive design and seamless","user experience for competitive programmers worldwide","Empowered competitive programmers by identifying weaknesses and enhancing problem-solving skills."],
     features: [
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     title: "AI Mail Agent",
     slug: "ai-mail-agent",
-    period: "June 2025",
+    period: "June, 2025 - ∞",
     description: "An AI Agent that reads important mails and writes the suitable replies while saving summary of mails in a csv file.",
     longDescription: ["Developed an intelligent email assistant using Node.js and TypeScript to automate email management.","Integrated with Gmail API to securely access and scan incoming messages.","Utilized OpenAI's language models to generate context-aware reply drafts for important emails.","Implemented logic to identify relevant emails based on context and sender.","Streamlined email workflow, reducing time spent on repetitive responses and ensuring timely communication."],
     features: [
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     title: "AI Rag Agent",
     slug: "ai-rag-agent",
-    period: "May-2025",
+    period: "May, 2025 - ∞",
     description: "A research assistant tool that leverages AI to help users to ask any question and get answer to it from any of users uploaded documents.",
     longDescription: ["Developed a Retrieval-Augmented Generation (RAG) AI agent using LangChain to enable efficient querying of legal","documents and research papers.","Implemented parsing and chunking of PDF and TXT files to optimize document retrieval processes.","Utilized in-memory storage solutions to ensure fast access to document chunks during query processing.","Implemented query handling and answer generation to deliver accurate, contextually relevant responses based","solely on uploaded document content."],
     features: [

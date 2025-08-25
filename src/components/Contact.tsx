@@ -17,7 +17,7 @@ export default function Contact() {
             Send Email
           </a>
           <a
-            href="https://wa.me/9188824488639"
+            href="https://wa.me/918882488639"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-3 border border-green-200 dark:border-green-800/30 text-green-700 dark:text-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors text-center font-medium"

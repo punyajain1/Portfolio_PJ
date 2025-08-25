@@ -37,7 +37,7 @@ export default function Header() {
         </div>
         <div className="flex-1">
           <h1 className="text-3xl font-bold text-zinc-900 dark:text-[#f0f6fc] mb-2">Hi!! Punya Here</h1>
-          <p className="text-zinc-600 dark:text-[#8b949e] mb-3">20-year-old software developer from India 🇮🇳</p>
+          <p className="text-zinc-600 dark:text-[#8b949e] mb-3">Software Developer from India 🇮🇳</p>
           <p className="text-zinc-600 dark:text-[#8b949e] text-sm leading-relaxed mb-4">
             I craft full-stack apps, blend AI with the web, and build tools that empower people.
             From AI-powered profile analyzers to intelligent agents, I enjoy coding things that feel like magic ✨
