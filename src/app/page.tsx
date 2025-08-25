@@ -34,7 +34,7 @@ export default function Home() {
                   backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
                   backgroundSize: '15px 15px',
                   backgroundAttachment: 'fixed'}}></div>
-              <Image src={head_img} alt="PJ" width={200} height={168} className="w-8/12 sm:w-6/12 h-32 sm:h-42 rounded-lg shadow-lg relative z-10" />
+              <Image src={head_img} alt="PJ" width={200} height={200} className="w-8/12 sm:w-6/12 h-42 sm:h-42 rounded-lg shadow-lg relative z-10" />
             </div>
           </div>
         </div>
