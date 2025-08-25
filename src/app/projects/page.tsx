@@ -19,13 +19,13 @@ export default function ProjectsPage() {
       
       {/* Content */}
       <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           {/* Header section with background for better visibility */}
-          <div className="bg-white/80 dark:bg-[#0d1117]/80 backdrop-blur-sm rounded-lg p-6 mb-8 border border-zinc-200 dark:border-[#30363d]">
+          <div className="bg-white/80 dark:bg-[#0d1117]/80 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 border border-zinc-200 dark:border-[#30363d]">
             {/* Back button */}
             <Link 
               href="/#projects" 
-              className="inline-flex items-center text-zinc-600 dark:text-[#8b949e] hover:text-zinc-900 dark:hover:text-[#f0f6fc] mb-6 transition-colors px-3 py-2 border border-zinc-300 dark:border-[#30363d] rounded-lg hover:border-zinc-400 dark:hover:border-[#484f58] hover:bg-zinc-50 dark:hover:bg-[#21262d] bg-white dark:bg-[#161b22]"
+              className="inline-flex items-center text-zinc-600 dark:text-[#8b949e] hover:text-zinc-900 dark:hover:text-[#f0f6fc] mb-4 sm:mb-6 transition-colors px-3 py-2 border border-zinc-300 dark:border-[#30363d] rounded-lg hover:border-zinc-400 dark:hover:border-[#484f58] hover:bg-zinc-50 dark:hover:bg-[#21262d] bg-white dark:bg-[#161b22] text-sm"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -35,15 +35,15 @@ export default function ProjectsPage() {
 
             {/* Page header */}
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-[#f0f6fc]">All Projects</h1>
-              <p className="text-zinc-600 dark:text-[#8b949e]">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-black dark:text-[#f0f6fc]">All Projects</h1>
+              <p className="text-zinc-600 dark:text-[#8b949e] text-sm sm:text-base">
                 A collection of my recent work and side projects. Each project represents a unique challenge and learning experience.
               </p>
             </div>
           </div>
 
           {/* Projects grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {projects.map((project) => (
               <ProjectCard
                 key={project.slug}

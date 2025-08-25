@@ -9,6 +9,8 @@ body {
   background-color: #fafafa;
   color: #18181b;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 .dark body {
@@ -32,6 +34,9 @@ a {
 
 button {
   cursor: pointer;
+  /* Improve touch targets for mobile */
+  min-height: 44px;
+  min-width: 44px;
 }
 
 /* Smooth scrolling */
@@ -76,4 +81,23 @@ html {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  /* Improve tap targets */
+  a, button {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Better text readability on mobile */
+  body {
+    line-height: 1.7;
+  }
+  
+  /* Prevent horizontal scrolling */
+  body, html {
+    overflow-x: hidden;
+  }
 }

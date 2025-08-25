@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/context/ThemeContext'
 export const metadata: Metadata = {
   title: 'Punya Jain - Portfolio',
   description: 'Portfolio website showcasing my work and experience',
+  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/punya.jpg',
     shortcut: '/punya.jpg',

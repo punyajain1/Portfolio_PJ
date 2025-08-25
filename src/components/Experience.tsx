@@ -23,19 +23,19 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="mb-12">
-      <h2 className="text-xl font-bold mb-6 text-black dark:text-[#f0f6fc]">Experience</h2>
+    <section className="mb-8 sm:mb-12">
+      <h2 className="text-xl font-bold mb-4 sm:mb-6 text-black dark:text-[#f0f6fc]">Experience</h2>
       
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {experiences.map((exp) => (
-          <div key={exp.company} className="space-y-4">
+          <div key={exp.company} className="space-y-3 sm:space-y-4">
             <h3 className="text-lg font-semibold text-black dark:text-[#f0f6fc]">{exp.company}</h3>
             {exp.positions.map((position, index) => (
-              <div key={index} className="ml-4 border-l-2 border-gray-200 dark:border-[#30363d] pl-4 space-y-2">
-                <div className="flex items-center gap-2">
+              <div key={index} className="ml-2 sm:ml-4 border-l-2 border-gray-200 dark:border-[#30363d] pl-3 sm:pl-4 space-y-2">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                   <h4 className="font-medium text-black dark:text-[#f0f6fc]">{position.title}</h4>
                   {position.current && (
-                    <span className="px-2 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-full">
+                    <span className="px-2 py-1 text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-full w-fit">
                       Current
                     </span>
                   )}
@@ -46,7 +46,7 @@ export default function Experience() {
                 </div>
                 
                 {position.description.length > 0 && (
-                  <ul className="text-sm text-zinc-700 dark:text-[#8b949e] space-y-1 list-disc list-inside">
+                  <ul className="text-sm text-zinc-700 dark:text-[#8b949e] space-y-1 list-disc list-inside pl-2 sm:pl-0">
                     {position.description.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}

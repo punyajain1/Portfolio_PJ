@@ -29,12 +29,12 @@ export default function Home() {
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto">
-            <div className="h-52 flex items-center justify-center relative">
+            <div className="h-40 sm:h-52 flex items-center justify-center relative">
               <div className="absolute inset-0 dark:opacity-30" style={{
                   backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
                   backgroundSize: '15px 15px',
                   backgroundAttachment: 'fixed'}}></div>
-              <Image src={head_img} alt="PJ" width={200} height={168} className="w-6/12 h-42 rounded-lg shadow-lg relative z-10" />
+              <Image src={head_img} alt="PJ" width={200} height={168} className="w-8/12 sm:w-6/12 h-32 sm:h-42 rounded-lg shadow-lg relative z-10" />
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
       {/* Header Section */}
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <Header />
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
       {/* About Section */}
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <About />
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <Experience />
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Home() {
        {/* Stack Section */}
       <section id="stack" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <Stack />
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <Projects />
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function Home() {
     {/* Education Section */}
       <section id="education" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <Education />
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 py-1">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
             <Contact />
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
       {/* Footer Section */}
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-2 py-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6">
             <Footer />
           </div>
         </div>

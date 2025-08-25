@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <section className="mb-12">
-      <h2 className="text-xl font-bold mb-6 text-black dark:text-[#f0f6fc]">About</h2>
+    <section className="mb-8 sm:mb-12">
+      <h2 className="text-xl font-bold mb-4 sm:mb-6 text-black dark:text-[#f0f6fc]">About</h2>
       
-      <div className="space-y-4 text-zinc-700 dark:text-[#8b949e] leading-relaxed">
+      <div className="space-y-3 sm:space-y-4 text-zinc-700 dark:text-[#8b949e] leading-relaxed text-sm sm:text-base">
         <p>
           Hello World!, I&apos;m Punya! A CS Grad passionate about creating high-performance,
           user-centric software solutions with intuitive and engaging designs. I am
