@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const handleCoffeeClick = () => {
     // You can add a link to buy you coffee or any other action
-    window.open('https://buymeacoffee.com/yourprofile', '_blank');
+    window.open('https://lightning-dust-053.notion.site/Buy-Me-a-Coffee-The-Lazy-Way-17d72d69c0498008aa42ef7121aff3b6?source=copy_link', '_blank');
   };
 
   return (

@@ -9,20 +9,34 @@ export default function Contact() {
           explore new ideas.
         </p>
         
-        <div className="flex gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a
-            href="https://x.com/punyajain"
+            href="mailto:punya01155@gmail.com"
+            className="px-4 py-3 border border-red-200 dark:border-red-800/30 text-red-700 dark:text-red-400 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors text-center font-medium"
+          >
+            Send Email
+          </a>
+          <a
+            href="https://wa.me/9188824488639"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-[#238636] dark:hover:bg-[#2ea043] transition-colors"
+            className="px-4 py-3 border border-green-200 dark:border-green-800/30 text-green-700 dark:text-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors text-center font-medium"
+          >
+            WhatsApp
+          </a>
+          <a
+            href="https://x.com/PunyaJain01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-3 border border-black dark:border-white/30 text-black dark:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-white/10 transition-colors text-center font-medium"
           >
             Message on X
           </a>
           <a
-            href="https://cal.com/punya/15min"
+            href="https://cal.com/punya-jain/15min"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-gray-300 dark:border-[#30363d] text-gray-700 dark:text-[#f0f6fc] rounded-lg hover:bg-gray-50 dark:hover:bg-[#21262d] transition-colors"
+            className="px-4 py-3 border border-blue-200 dark:border-blue-800/30 text-blue-700 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors text-center font-medium"
           >
             Schedule Call
           </a>

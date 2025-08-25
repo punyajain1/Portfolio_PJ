@@ -11,21 +11,21 @@ export default function Header() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/punyajain",
+      url: "https://www.linkedin.com/in/punya-jain-40ab8b2a6/",
       icon: isDarkMode ? <LinkedinLight />:<LinkedinDark /> ,
-      username: "/punyajain"
+      username: "/PunyaJain"
     },
     {
       name: "GitHub", 
-      url: "https://github.com/punyajain",
+      url: "https://github.com/punyajain1",
       icon: isDarkMode ? <GitHubLight />: <GitHubDark /> ,
-      username: "/punyajain"
+      username: "/punyajain1"
     },
     {
       name: "X (Twitter)",
-      url: "https://x.com/punyajain",
+      url: "https://x.com/PunyaJain01",
       icon: isDarkMode ? <Xlight /> : <Xdark />,
-      username: "/punyajain"
+      username: "/PunyaJain01"
     }
   ];
   return (
@@ -51,7 +51,7 @@ export default function Header() {
             
             {/* Resume Link */}
             <a
-              href="/resume.pdf"
+              href="https://docs.google.com/document/d/1F_ySU-v3AJAlZHwlZ63v5Rg0kadb8-O4792Qj6X2Eiw/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1.5 bg-slate-700 hover:bg-slate-800 dark:bg-[#21262d] dark:hover:bg-[#30363d] text-white dark:text-[#f0f6fc] text-sm font-medium rounded-full hover:scale-105 transition-all duration-200 flex items-center gap-2"

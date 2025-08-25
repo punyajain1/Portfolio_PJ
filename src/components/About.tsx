@@ -11,10 +11,9 @@ export default function About() {
         </p>
         
         <p>
-          I specialize in building high-quality web and mobile applications using Next.js,
-          React, TypeScript, and modern front-end and back-end technologies. I also am heavily leaned
-          towards the world of AI and its Applications and built some passion projects
-          around it.
+          I am a Full-Stack Developer specializing in building scalable web and mobile applications. 
+          My expertise includes Next.js, TypeScript, the MERN stack, as well as both SQL and NoSQL databases, 
+          with a strong focus on backend development. I am also deeply passionate about Artificial Intelligence and have experience building AI agents and applications through various projects and explorations.
         </p>
         
         <p>
