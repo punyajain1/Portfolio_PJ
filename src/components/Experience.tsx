@@ -18,7 +18,71 @@ const experiences = [
         ]
       }
     ]
+  },{
+    company: "Anonymous",
+    positions: [
+      {
+        title: "Backend Developer",
+        type: "Freelance",
+        period: "June 2025— June 2025",
+        current: false,
+        description: [
+  "Migrated backend database from MongoDB with Mongoose to PostgreSQL",
+  "Utilized Prisma ORM for schema definition and database management",
+  "Ensured data integrity and safety during migration process",
+  "Maintained schema consistency across different environments",
+  "Optimized queries and relations for PostgreSQL performance",
+  "Implemented safety checks to prevent data loss or corruption"
+],
+        technologies: [
+          "PostgreSQL", "Node.js", "TypeScript", "Prisma", "MongoDB","Mongoose" , "Express"
+        ]
+      }
+    ]
   },
+  {
+    company: "Anonymous",
+    positions: [
+      {
+        title: "Backend Developer",
+        type: "Freelance",
+        period: "June 2025 — June 2025",
+        current: false,
+        description: [
+  "Migrated backend database from MongoDB with Mongoose to PostgreSQL",
+  "Utilized Prisma ORM for schema definition and database management",
+  "Ensured data integrity and safety during migration process",
+  "Maintained schema consistency across different environments",
+  "Optimized queries and relations for PostgreSQL performance",
+  "Implemented safety checks to prevent data loss or corruption"
+],
+        technologies: [
+          "PostgreSQL", "Node.js", "TypeScript", "Prisma", "MongoDB","Mongoose" , "Express"
+        ]
+      }
+    ]
+  },
+  {
+    company: "Anonymous",
+    positions: [
+      {
+        title: "Software Developer",
+        type: "Freelance",
+        period: "June 2025 — June 2025",
+        current: false,
+        description: [
+  "Implemented AI-powered chatbot for customer interaction",
+  "Integrated OpenAI API to handle product-related queries",
+  "Enabled chatbot to schedule customer support callbacks",
+  "Added functionality to track customer orders through chatbot",
+  "Improved user experience by providing instant and automated responses"
+],
+        technologies: [
+          
+        ]
+      }
+    ]
+  }
 ];
 
 export default function Experience() {
