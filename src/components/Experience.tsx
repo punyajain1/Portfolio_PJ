@@ -5,7 +5,7 @@ const experiences = [
       {
         title: "Frontend Developer Intern",
         type: "Freelance",
-        period: "May 2025—June 2025",
+        period: "June 2025 - July 2025",
         current: false,
         description: [
           "Developed the frontend for a fast-paced startup using React, TypeScript, and Framer Motion to deliver a smooth, responsive user experience",
@@ -46,7 +46,7 @@ const experiences = [
       {
         title: "Software Developer",
         type: "Freelance",
-        period: "June 2025 — June 2025",
+        period: "July 2025 — July 2025",
         current: false,
         description: [
   "Implemented AI-powered chatbot for customer interaction",
