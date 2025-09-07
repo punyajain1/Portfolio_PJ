@@ -3,7 +3,7 @@ const experiences = [
     company: "Starportal",
     positions: [
       {
-        title: "Frontend Developer Intern",
+        title: "Frontend Developer",
         type: "Freelance",
         period: "June 2025 - July 2025",
         current: false,
