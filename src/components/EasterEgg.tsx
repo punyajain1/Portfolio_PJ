@@ -56,4 +56,5 @@ export default function EasterEgg() {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [router]);
+  return null;
 }
