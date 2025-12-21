@@ -69,8 +69,8 @@ export default function Experience() {
       <h2 className="text-xl font-bold mb-4 sm:mb-6 text-black dark:text-[#f0f6fc]">Experience</h2>
       
       <div className="space-y-6 sm:space-y-8">
-        {experiences.map((exp) => (
-          <div key={exp.company} className="space-y-3 sm:space-y-4">
+        {experiences.map((exp, index) => (
+          <div key={`${exp.company}-${index}`} className="space-y-3 sm:space-y-4">
             <h3 className="text-lg font-semibold text-black dark:text-[#f0f6fc]">{exp.company}</h3>
             {exp.positions.map((position, index) => (
               <div key={index} className="ml-2 sm:ml-4 border-l-2 border-gray-200 dark:border-[#30363d] pl-3 sm:pl-4 space-y-2">
