@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 interface ProjectCardProps {
   title: string;
@@ -14,7 +17,10 @@ export default function ProjectCard({ title, description, thumbnail, slug, techn
   
   return (
     <Link href={`/projects/${slug}`}>
-      <div className={`border border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] rounded-lg p-4 hover:border-gray-300 dark:hover:border-[#656d76] hover:shadow-md transition-all duration-200 cursor-pointer group ${
+      <motion.div 
+        whileHover={{ y: -5 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className={`border border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] rounded-lg p-4 hover:border-gray-300 dark:hover:border-[#656d76] hover:shadow-lg transition-all duration-200 cursor-pointer group ${
         hasImage ? 'h-auto' : 'h-fit'
       }`}>
         {hasImage && (
@@ -23,7 +29,7 @@ export default function ProjectCard({ title, description, thumbnail, slug, techn
               src={thumbnail}
               alt={`${title} thumbnail`}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-200"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         )}
@@ -55,7 +61,7 @@ export default function ProjectCard({ title, description, thumbnail, slug, techn
             </span>
           )}
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }

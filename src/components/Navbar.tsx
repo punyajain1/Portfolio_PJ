@@ -34,9 +34,9 @@ const Navbar = () => {
 
   return (
     <>
-      <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] text-black dark:text-[#f0f6fc]">
+      <section className="w-full border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117] text-black dark:text-[#f0f6fc]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-8 py-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-8 py-4">
             <div className="flex justify-between items-center">
               {/* Get in Touch button - Hidden on mobile, shown on larger screens */}
               <button

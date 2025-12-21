@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { GitHubLight, GitHubDark } from '../../icons/github';
 import { LinkedinLight, LinkedinDark } from '../../icons/linkedin';
 import { Xdark, Xlight } from '../../icons/x';
@@ -32,9 +33,14 @@ export default function Header() {
   return (
     <header className="mb-8 sm:mb-12">
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
-        <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-200 dark:bg-[#21262d] rounded-full overflow-hidden flex-shrink-0">
+        <motion.div 
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-200 dark:bg-[#21262d] rounded-full overflow-hidden flex-shrink-0 ring-4 ring-gray-100 dark:ring-[#30363d]"
+        >
           <Image src="/punya.jpg" alt="Punya" width={128} height={128} className="w-full h-full object-cover" />
-        </div>
+        </motion.div>
         <div className="flex-1 text-center sm:text-left">
           <h1 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-[#f0f6fc] mb-2">Hi!! Punya Here</h1>
           <p className="text-zinc-600 dark:text-[#8b949e] mb-3">Software Developer from India 🇮🇳</p>
@@ -47,16 +53,18 @@ export default function Header() {
           <div className="flex items-center justify-center sm:justify-start gap-3 flex-wrap"
           >
             <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 px-3 py-1.5 rounded-full text-sm font-medium shadow-[0_0_20px_rgba(34,197,94,0.5)] dark:shadow-[0_0_20px_rgba(34,197,94,0.4)] ring-2 ring-green-400/30 dark:ring-green-400/40">
-              <span className="inline-block w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+              <span className="inline-block w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse"></span>
               Available to work
             </div>
             
             {/* Resume Link */}
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="https://docs.google.com/document/d/1F_ySU-v3AJAlZHwlZ63v5Rg0kadb8-O4792Qj6X2Eiw/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 bg-slate-700 hover:bg-slate-800 dark:bg-[#21262d] dark:hover:bg-[#30363d] text-white dark:text-[#f0f6fc] text-sm font-medium rounded-full hover:scale-105 transition-all duration-200 flex items-center gap-2"
+              className="px-3 py-1.5 bg-slate-700 hover:bg-slate-800 dark:bg-[#21262d] dark:hover:bg-[#30363d] text-white dark:text-[#f0f6fc] text-sm font-medium rounded-full transition-all duration-200 flex items-center gap-2"
               title="View Resume"
             >
               <svg 
@@ -73,7 +81,7 @@ export default function Header() {
                 />
               </svg>
               View Resume
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
@@ -81,12 +89,14 @@ export default function Header() {
       {/* Social Links */}
       <div className="flex flex-wrap gap-2 sm:gap-3 items-center justify-center sm:justify-start">
         {socialLinks.map((link) => (
-          <a
+          <motion.a
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
             key={link.name}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 sm:gap-3 bg-slate-100 hover:bg-slate-200 dark:bg-[#21262d] dark:hover:bg-[#30363d] rounded-lg hover:scale-105 transition-all duration-200 px-2 sm:px-3 py-2 border border-slate-200 dark:border-[#30363d] group"
+            className="flex items-center gap-2 sm:gap-3 bg-slate-100 hover:bg-slate-200 dark:bg-[#21262d] dark:hover:bg-[#30363d] rounded-lg transition-all duration-200 px-2 sm:px-3 py-2 border border-slate-200 dark:border-[#30363d] group"
             title={link.name}
           >
             <div className="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center flex-shrink-0">
@@ -95,7 +105,7 @@ export default function Header() {
             <span className="text-xs sm:text-sm text-slate-700 dark:text-[#f0f6fc] font-medium group-hover:text-slate-900 dark:group-hover:text-white">
               {link.username}
             </span>
-          </a>
+          </motion.a>
         ))}
       </div>
     </header>

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const programmingLanguages = [
   { name: "C++", url: "https://isocpp.org/" },
   { name: "Python", url: "https://www.python.org/" },
@@ -40,12 +42,36 @@ const databases = [
 ];
 
 export default function Stack() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
   const renderTechSection = (title: string, technologies: { name: string; url: string }[]) => (
     <div className="mb-4 sm:mb-6">
       <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-gray-700 dark:text-[#f0f6fc]">{title}</h3>
-      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-50px" }}
+        className="flex flex-wrap gap-1.5 sm:gap-2"
+      >
         {technologies.map((tech) => (
-          <a
+          <motion.a
+            variants={item}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
             key={tech.name}
             href={tech.url}
             target="_blank"
@@ -53,9 +79,9 @@ export default function Stack() {
             className="inline-flex items-center px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 dark:bg-[#21262d] dark:hover:bg-[#30363d] dark:text-[#f0f6fc] rounded-full transition-colors"
           >
             {tech.name}
-          </a>
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 

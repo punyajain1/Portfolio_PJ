@@ -10,7 +10,8 @@ import {
   Contact,
   Footer,
   Navbar,
-  Education
+  Education,
+  FadeIn
 } from '@/components';
 import { useTheme } from '@/context/ThemeContext';
 
@@ -51,7 +52,9 @@ export default function Home() {
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <Header />
+            <FadeIn>
+              <Header />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -68,7 +71,9 @@ export default function Home() {
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <About />
+            <FadeIn delay={0.1}>
+              <About />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -85,7 +90,9 @@ export default function Home() {
       <section id="experience" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <Experience />
+            <FadeIn delay={0.1}>
+              <Experience />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -101,7 +108,9 @@ export default function Home() {
       <section id="stack" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <Stack />
+            <FadeIn delay={0.1}>
+              <Stack />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -117,7 +126,9 @@ export default function Home() {
       <section id="projects" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <Projects />
+            <FadeIn delay={0.1}>
+              <Projects />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -135,7 +146,9 @@ export default function Home() {
       <section id="education" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <Education />
+            <FadeIn delay={0.1}>
+              <Education />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -152,7 +165,9 @@ export default function Home() {
       <section id="contact" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <Contact />
+            <FadeIn delay={0.1}>
+              <Contact />
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -168,7 +183,9 @@ export default function Home() {
       <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
         <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
           <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6">
-            <Footer />
+            <FadeIn delay={0.1}>
+              <Footer />
+            </FadeIn>
           </div>
         </div>
       </section>
