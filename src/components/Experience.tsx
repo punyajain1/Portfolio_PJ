@@ -24,7 +24,7 @@ const experiences = [
       {
         title: "Backend Developer",
         type: "Freelance",
-        period: "June 2025— June 2025",
+        period: "July 2025 — August 2025",
         current: false,
         description: [
   "Migrated backend database from MongoDB with Mongoose to PostgreSQL",
@@ -46,7 +46,7 @@ const experiences = [
       {
         title: "Software Developer",
         type: "Freelance",
-        period: "July 2025 — July 2025",
+        period: "August 2025 - August 2025",
         current: false,
         description: [
   "Implemented AI-powered chatbot for customer interaction",
