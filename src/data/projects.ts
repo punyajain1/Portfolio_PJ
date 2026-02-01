@@ -191,7 +191,7 @@ export const projects: Project[] = [
     technologies: [
       "React", "TypeScript", "Express", "Node.js", "OpenAI"
     ],
-    thumbnail: "/thumbnails/bolt-clone.png",
+    thumbnail: "/thumbnails/bolt_clone.png",
     links: {
       visit: "",
       source: ""
