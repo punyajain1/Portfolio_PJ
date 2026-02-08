@@ -1,6 +1,5 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  outputFileTracingRoot: '/Users/punyajain/Desktop/vs code/portfolio_pj/new'
+  // outputFileTracingRoot: path.join(__dirname, '../../'),
 }
 
 module.exports = nextConfig

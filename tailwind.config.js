@@ -15,11 +15,11 @@ module.exports = {
 					'monospace'
 				],
 				sans: [
-					'PT Serif"',
+					'PT Serif',
 					'serif'
 				],
 				serif: [
-					'PT Serif"',
+					'PT Serif',
 					'serif'
 				]
 			},
