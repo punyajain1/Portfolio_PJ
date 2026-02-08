@@ -1,194 +1,59 @@
 'use client';
 
-import Image from 'next/image';
-import {
-  Header,
-  About,
-  Stack,
-  Experience,
-  Projects,
-  Contact,
-  Footer,
-  Navbar,
-  Education,
-  FadeIn
-} from '@/components';
-import { useTheme } from '@/context/ThemeContext';
+import { Header, Stack, Projects, Footer, Experience, Contact, Navbar, Education } from '@/components';
+import { motion } from 'framer-motion';
 
 export default function Home() {
-  const { isDarkMode } = useTheme();
-  const head_img = isDarkMode ? "/head_dark.png" : "/head_light.png";
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0d1117] transition-colors duration-200">
-      <Navbar />
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
+    <div className="min-h-screen font-sans transition-colors duration-200 select-none pb-24">
+      <main className="max-w-2xl mx-auto px-4">
+        <Navbar />
 
-      <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto">
-            <div className="h-40 sm:h-52 flex items-center justify-center relative">
-              <div className="absolute inset-0 dark:opacity-30" style={{
-                  backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-                  backgroundSize: '15px 15px',
-                  backgroundAttachment: 'fixed'}}></div>
-              <Image src={head_img} alt="PJ" width={200} height={200} className="w-8/12 sm:w-6/12 h-42 sm:h-42 rounded-lg shadow-lg relative z-10" />
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
+        <Header />
 
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div variants={item} id="experience" className="scroll-mt-24">
+            <Experience />
+          </motion.div>
 
-      {/* Header Section */}
-      <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn>
-              <Header />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+          <motion.div variants={item} id="education" className="scroll-mt-24">
+            <Education />
+          </motion.div>
 
+          <motion.div variants={item} id="stack" className="scroll-mt-24">
+            <Stack />
+          </motion.div>
 
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
+          <motion.div variants={item} id="projects" className="scroll-mt-24">
+            <Projects />
+          </motion.div>
 
-      {/* About Section */}
-      <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn delay={0.1}>
-              <About />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+          <motion.div variants={item} id="contact" className="scroll-mt-24">
+            <Contact />
+          </motion.div>
+        </motion.div>
 
-
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
-
-      {/* Experience Section */}
-      <section id="experience" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn delay={0.1}>
-              <Experience />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
-
-       {/* Stack Section */}
-      <section id="stack" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn delay={0.1}>
-              <Stack />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
-
-      {/* Projects Section */}
-      <section id="projects" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn delay={0.1}>
-              <Projects />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
-
-
-    {/* Education Section */}
-      <section id="education" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn delay={0.1}>
-              <Education />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
-
-
-      {/* Contact Section */}
-      <section id="contact" className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6 sm:py-8">
-            <FadeIn delay={0.1}>
-              <Contact />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Spacer with dotted background */}
-      <div className="h-8 dark:opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
-        backgroundSize: '15px 15px',
-        backgroundAttachment: 'fixed'
-      }}></div>
-
-      {/* Footer Section */}
-      <section className="w-full border-t border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#0d1117]">
-        <div className="max-w-2xl mx-auto border-l border-r border-gray-200 dark:border-[#30363d]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-4 py-6">
-            <FadeIn delay={0.1}>
-              <Footer />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+        <Footer />
+      </main>
     </div>
   );
 }

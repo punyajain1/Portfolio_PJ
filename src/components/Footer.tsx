@@ -1,46 +1,40 @@
-export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+'use client';
 
-  const handleGetInTouch = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+import { useState, useEffect } from 'react';
+
+export default function Footer() {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      setTime(new Date().toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Kolkata'
+      }));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <footer className="">
-      <div className="max-w-4xl">
-        {/* Main content */}
-        <div className="text-center space-y-2">
-          <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent mx-auto"></div>
-          
-          <div className="font-typewriter text-xs sm:text-sm tracking-widest text-gray-500 dark:text-gray-400 uppercase px-4">
-            Let&apos;s create something amazing
-          </div>
-          
-          <div className="flex items-center justify-center space-x-4 sm:space-x-8 px-4">
-            <button 
-              onClick={handleGetInTouch}
-              className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 font-medium tracking-wide"
-            >
-              Get in touch
-            </button>
-            <button 
-              onClick={scrollToTop}
-              className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200 font-medium tracking-wide"
-            >
-              ↑ Back to top
-            </button>
-          </div>
-          
-          <div className="flex items-center justify-center space-x-3">
-            <div className="w-1 h-1 bg-gray-400 dark:bg-gray-500 rounded-full"></div>
-            <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">2025</span>
-            <div className="w-1 h-1 bg-gray-400 dark:bg-gray-500 rounded-full"></div>
-          </div>
+    <footer className="pt-8 mt-8 pb-2 border-t border-zinc-200 dark:border-zinc-800">
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-500 dark:text-zinc-500">
+        <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+          <p className="text-zinc-600 dark:text-zinc-400">Designed & Developed by Punya</p>
+          <span className="hidden sm:inline text-zinc-300 dark:text-zinc-700">•</span>
+          <p>© 2026 All rights reserved.</p>
+        </div>
+
+        <div className="flex items-center gap-2 font-mono">
+          <span>🇮🇳</span>
+          <span>Delhi, India</span>
+          <span className="text-zinc-300 dark:text-zinc-700">•</span>
+          <span className="text-zinc-600 dark:text-zinc-400">{time || '--:--'}</span>
         </div>
       </div>
     </footer>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 const KONAMI_CODE = [
   'ArrowUp',
@@ -18,7 +17,6 @@ const KONAMI_CODE = [
 
 export default function EasterEgg() {
   const [inputSequence, setInputSequence] = useState<string[]>([]);
-  const router = useRouter();
 
   useEffect(() => {
     console.log(
@@ -30,10 +28,10 @@ export default function EasterEgg() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const { key } = event;
-      
+
       setInputSequence((prev) => {
         const newSequence = [...prev, key];
-        
+
         // Keep only the last N keys, where N is the length of the Konami code
         if (newSequence.length > KONAMI_CODE.length) {
           newSequence.shift();
@@ -55,6 +53,6 @@ export default function EasterEgg() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [router]);
+  }, []);
   return null;
 }

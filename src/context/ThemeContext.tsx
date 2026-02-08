@@ -2,8 +2,12 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+type Theme = 'light' | 'dark' | 'system';
+
 interface ThemeContextType {
   isDarkMode: boolean;
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
   toggleDarkMode: () => void;
 }
 
@@ -18,41 +22,59 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [theme, setThemeState] = useState<Theme>('light');
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
+  // Initialize theme from localStorage on mount
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    if (savedTheme) {
+      setThemeState(savedTheme);
     } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
+      // Check system preference if no saved theme
+      const systemIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setThemeState(systemIsDark ? 'dark' : 'light');
     }
   }, []);
 
-  const toggleDarkMode = () => {
-    console.log('toggleDarkMode called, current isDarkMode:', isDarkMode);
-    setIsDarkMode(prevMode => {
-      const newMode = !prevMode;
-      if (newMode) {
+  // Apply theme whenever it changes
+  useEffect(() => {
+    if (!mounted) return;
+
+    const shouldBeDark = theme === 'dark';
+
+    const updateDOM = () => {
+      setIsDarkMode(shouldBeDark);
+
+      if (shouldBeDark) {
         document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-        console.log('Switched to dark mode');
       } else {
         document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-        console.log('Switched to light mode');
       }
-      return newMode;
-    });
+    };
+
+    if (typeof document !== 'undefined' && 'startViewTransition' in document) {
+      (document as any).startViewTransition(updateDOM);
+    } else {
+      updateDOM();
+    }
+  }, [theme, mounted]);
+
+  const setTheme = (newTheme: Theme) => {
+    setThemeState(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  const toggleDarkMode = () => {
+    // Legacy support: toggle between light and dark, bypassing system
+    const newTheme = isDarkMode ? 'light' : 'dark';
+    setTheme(newTheme);
   };
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+    <ThemeContext.Provider value={{ isDarkMode, theme, setTheme, toggleDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );

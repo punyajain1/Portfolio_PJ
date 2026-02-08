@@ -1,113 +1,264 @@
 'use client';
 
+
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { GitHubLight, GitHubDark } from '../../icons/github';
-import { LinkedinLight, LinkedinDark } from '../../icons/linkedin';
-import { Xdark, Xlight } from '../../icons/x';
+import { BadgeCheck, Sun, Moon, Github, Linkedin, Twitter, Coffee, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { useTheme } from '@/context/ThemeContext';
 
+const RotatingText = () => {
+  const words = ["Building in Public", "Indie Hacker", "Ship Fast", "Break Things", "Learning Daily", "MVP Mode", "Relentless", "Execution First", "No Excuses", "Consistency > Motivation", "10x Mindset", "Daily Grind"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400 font-[family-name:var(--font-instrument-serif)] tracking-wider text-sm h-6 overflow-hidden ">
+      <div className="relative w-48 h-6 ">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="absolute top-0 left-0 whitespace-nowrap"
+          >
+            {words[index]}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
+
 export default function Header() {
-  const { isDarkMode } = useTheme();
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   const socialLinks = [
     {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/punya-jain-40ab8b2a6/",
-      icon: isDarkMode ? <LinkedinLight />:<LinkedinDark /> ,
-      username: "/PunyaJain"
-    },
-    {
-      name: "GitHub", 
+      name: "GitHub",
       url: "https://github.com/punyajain1",
-      icon: isDarkMode ? <GitHubLight />: <GitHubDark /> ,
-      username: "/punyajain1"
+      icon: <Github className="w-full h-full text-zinc-900 dark:text-zinc-100" />,
     },
     {
       name: "X (Twitter)",
       url: "https://x.com/PunyaJain01",
-      icon: isDarkMode ? <Xlight /> : <Xdark />,
-      username: "/PunyaJain01"
+      icon: <Twitter className="w-full h-full text-zinc-900 dark:text-zinc-100" />,
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/punya-jain-40ab8b2a6/",
+      icon: <Linkedin className="w-full h-full text-[#0a66c2]" />,
     }
   ];
+
   return (
-    <header className="mb-8 sm:mb-12">
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
-        <motion.div 
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-200 dark:bg-[#21262d] rounded-full overflow-hidden flex-shrink-0 ring-4 ring-gray-100 dark:ring-[#30363d]"
-        >
-          <Image src="/punya.jpg" alt="Punya" width={128} height={128} className="w-full h-full object-cover" />
-        </motion.div>
-        <div className="flex-1 text-center sm:text-left">
-          <h1 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-[#f0f6fc] mb-2">Hi!! Punya Here</h1>
-          <p className="text-zinc-600 dark:text-[#8b949e] mb-3">Software Developer from India 🇮🇳</p>
-          <p className="text-zinc-600 dark:text-[#8b949e] text-sm leading-relaxed mb-4 px-2 sm:px-0">
-            I craft full-stack apps, blend AI with the web, and build tools that empower people.
-            From AI-powered profile analyzers to intelligent agents, I enjoy coding things that feel like magic ✨
+    <motion.header
+      className="mb-14 mt-0 sm:mt-0"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Banner */}
+      <div className="relative w-full h-[200px] sm:h-[270px] rounded-2xl overflow-hidden mb-[-40px] sm:mb-[-50px] z-0">
+        <Image
+          src="/banner.jpg"
+          alt="Banner"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+          <p className="text-white text-base sm:text-xl italic font-serif text-center drop-shadow-md px-4">
+            The biggest risk is not taking any risk.
           </p>
-          
-          {/* Available to work indicator & Resume */}
-          <div className="flex items-center justify-center sm:justify-start gap-3 flex-wrap"
-          >
-            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 px-3 py-1.5 rounded-full text-sm font-medium shadow-[0_0_20px_rgba(34,197,94,0.5)] dark:shadow-[0_0_20px_rgba(34,197,94,0.4)] ring-2 ring-green-400/30 dark:ring-green-400/40">
-              <span className="inline-block w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse"></span>
-              Available to work
-            </div>
-            
-            {/* Resume Link */}
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="https://docs.google.com/document/d/1F_ySU-v3AJAlZHwlZ63v5Rg0kadb8-O4792Qj6X2Eiw/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1.5 bg-slate-700 hover:bg-slate-800 dark:bg-[#21262d] dark:hover:bg-[#30363d] text-white dark:text-[#f0f6fc] text-sm font-medium rounded-full transition-all duration-200 flex items-center gap-2"
-              title="View Resume"
-            >
-              <svg 
-                className="w-3 h-3 flex-shrink-0" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
-                />
-              </svg>
-              View Resume
-            </motion.a>
-          </div>
         </div>
       </div>
-      
-      {/* Social Links */}
-      <div className="flex flex-wrap gap-2 sm:gap-3 items-center justify-center sm:justify-start">
-        {socialLinks.map((link) => (
-          <motion.a
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 sm:gap-3 bg-slate-100 hover:bg-slate-200 dark:bg-[#21262d] dark:hover:bg-[#30363d] rounded-lg transition-all duration-200 px-2 sm:px-3 py-2 border border-slate-200 dark:border-[#30363d] group"
-            title={link.name}
-          >
-            <div className="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center flex-shrink-0">
-              {link.icon}
+
+      {/* Profile and Info */}
+      <div className="relative z-10 px-4 sm:px-6">
+        <div className="flex justify-between items-end">
+          {/* Profile Picture */}
+          <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white dark:border-background bg-zinc-100 dark:bg-zinc-800 overflow-hidden transform translate-y-2">
+            <Image
+              src={isDarkMode ? "/punya.jpg" : "/punya_2.jpg"}
+              alt="Punya Jain"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 96px, 128px"
+              priority
+            />
+          </div>
+
+          {/* Social Links - Desktop Only */}
+          <div className="hidden sm:flex items-center gap-1 mb-2">
+            {socialLinks.map((link) => (
+              <Button
+                key={link.name}
+                variant="ghost"
+                size="icon"
+                asChild
+                className="rounded-full"
+              >
+                <Link
+                  href={link.url}
+                  target="_blank"
+                >
+                  <div className="w-4 h-4 flex items-center justify-center">
+                    {link.icon}
+                  </div>
+                </Link>
+              </Button>
+            ))}
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="rounded-full text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 hover:bg-amber-100/50 dark:hover:bg-amber-900/20"
+            >
+              <Link
+                href="https://lightning-dust-053.notion.site/Buy-Me-a-Coffee-The-Lazy-Way-17d72d69c0498008aa42ef7121aff3b6?source=copy_link"
+                target="_blank"
+                aria-label="Buy me a coffee"
+              >
+                <div className="w-4 h-4 flex items-center justify-center">
+                  <Coffee className="w-full h-full" />
+                </div>
+              </Link>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+            >
+              <Link
+                href="https://drive.google.com/file/d/1b0NQ3XQYd_pkUFBoQelfUPdoNrRbP-i4/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Resume"
+              >
+                <div className="w-4 h-4 flex items-center justify-center">
+                  <FileText className="w-full h-full" />
+                </div>
+              </Link>
+            </Button>
+            <Button
+              onClick={toggleDarkMode}
+              variant="ghost"
+              size="icon"
+              className="rounded-full"
+              aria-label="Toggle theme"
+            >
+              <div className="w-4 h-4 flex items-center justify-center">
+                {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
+              </div>
+            </Button>
+          </div>
+        </div>
+
+        <div className="mt-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <h1 className="text-3xl sm:text-5xl font-bold italic text-black dark:text-white font-[family-name:var(--font-instrument-serif)] tracking-wider">
+              Punya Jain
+            </h1>
+
+            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-blue-500 w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path d="m23 12-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82L8.6 22.5l3.4-1.47 3.4 1.46 1.89-3.19 3.61-.82-.34-3.69L23 12zm-12.91 4.72-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z"></path>
+            </svg>
+
+            <div className="md:text-xl text-lg font-[family-name:var(--font-instrument-serif)] tracking-wider dark:text-zinc-400 text-zinc-600 font-light mt-1 sm:mt-2">
+              | Delhi, India 🇮🇳
             </div>
-            <span className="text-xs sm:text-sm text-slate-700 dark:text-[#f0f6fc] font-medium group-hover:text-slate-900 dark:group-hover:text-white">
-              {link.username}
-            </span>
-          </motion.a>
-        ))}
+          </div>
+
+          <div className="mt-2">
+            <RotatingText />
+          </div>
+        </div>
+
+        {/* Social Links - Mobile Only */}
+        <div className="flex sm:hidden items-center gap-1 mt-2">
+          {socialLinks.map((link) => (
+            <Button
+              key={link.name}
+              variant="ghost"
+              size="icon"
+              asChild
+              className="rounded-full"
+            >
+              <Link
+                href={link.url}
+                target="_blank"
+              >
+                <div className="w-4 h-4 flex items-center justify-center">
+                  {link.icon}
+                </div>
+              </Link>
+            </Button>
+          ))}
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="rounded-full text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 hover:bg-amber-100/50 dark:hover:bg-amber-900/20"
+          >
+            <Link
+              href="https://lightning-dust-053.notion.site/Buy-Me-a-Coffee-The-Lazy-Way-17d72d69c0498008aa42ef7121aff3b6?source=copy_link"
+              target="_blank"
+              aria-label="Buy me a coffee"
+            >
+              <div className="w-4 h-4 flex items-center justify-center">
+                <Coffee className="w-full h-full" />
+              </div>
+            </Link>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
+          >
+            <Link
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Resume"
+            >
+              <div className="w-4 h-4 flex items-center justify-center">
+                <FileText className="w-full h-full" />
+              </div>
+            </Link>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleDarkMode}
+            className="rounded-full"
+            aria-label="Toggle theme"
+          >
+            {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
+          </Button>
+        </div>
       </div>
-    </header>
+
+
+      {/* Bio */}
+      <div className="mt-2 px-1 sm:px-0">
+        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-base sm:text-lg">
+          Quietly turning late nights, caffeine, and curiosity into useful tools. From automation bots to AI-powered systems, I like solving real problems with code and shipping before overthinking. Learning in public, experimenting daily, and stacking small wins into real products. Less noise, more execution. 🚀
+        </p>
+      </div>
+    </motion.header>
   );
 }
