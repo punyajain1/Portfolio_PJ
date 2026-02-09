@@ -59,7 +59,7 @@ export default function Experience() {
                   <span className="text-zinc-400 transform transition-transform duration-200" style={{ rotate: isExpanded ? "90deg" : "0deg" }}>
                     <ChevronDown size={16} />
                   </span>
-                  <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+                  <h3 className="text-base sm:text-base text-sm font-semibold text-zinc-900 dark:text-zinc-100 whitespace-normal break-words ">
                     {exp.role} <span className="text-zinc-500 font-normal">at</span> {exp.company}
                   </h3>
                 </div>
