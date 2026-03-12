@@ -8,23 +8,25 @@ import { Button } from "@/components/ui/button";
 const experiences = [
   {
     company: "Starportal",
-    role: "Frontend Developer",
+    role: "Software Developer",
     period: "June 2025 - July 2025",
     description: [
-      "Developed smooth, responsive user experiences using React, TypeScript, and Framer Motion.",
-      "Implemented reusable components and optimized application performance for better user engagement.",
-      "Collaborated closely with the design team to ensure pixel-perfect implementation of UI designs."
+      "Developed scalable web systems using React, TypeScript, Node.js and integrated backend REST APIs",
+      "Built reusable UI components and improved application performance through optimized rendering and state management for AWS-hosted services",
+      "Built and integrated scalable backend APIs using Node.js, managing data with PostgreSQL and optimized SQL queries on AWS"
     ],
-    technologies: ["React", "TypeScript", "Framer Motion", "Tailwind CSS"]
+    technologies: ["React", "TypeScript", "Framer Motion", "Tailwind CSS" , "AWS"]
   },
   {
-    company: "Freelancing",
+    company: "Startup",
     role: "Backend & Software Developer",
     period: "July 2025 - August 2025",
     description: [
       "Migrated databases to PostgreSQL and optimized backend performance with Node.js and Prisma.",
+      "Optimized backend services and database queries using SQL improving analytics workload performance on AWS infrastructure",
       "Designed and implemented RESTful APIs to support various frontend features.",
-      "Worked on database schema design and normalization to improve data integrity."
+      "Worked on database schema design and normalization to improve data integrity.",
+      "Implemented monitoring, logging, and rollback mechanisms ensuring reliability for AWS-hosted system migrations."
     ],
     technologies: ["Node.js", "PostgreSQL", "Prisma", "Express", "REST API"]
   }

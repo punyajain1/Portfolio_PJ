@@ -43,7 +43,7 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "AI Mail Agent",
+    title: "Autonomous AI Email Agent",
     slug: "ai-mail-agent",
     period: "June, 2025",
     description: "An AI Agent that reads important mails and writes the suitable replies while saving summary of mails in a csv file.",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "AI Rag Agent",
+    title: "Agentic RAG Document Intelligence System",
     slug: "ai-rag-agent",
     period: "May, 2025",
     description: "A research assistant tool that leverages AI to help users to ask any question and get answer to it from any of users uploaded documents.",

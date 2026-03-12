@@ -7,7 +7,7 @@ const education = [
     period: "2023 — 2027",
     details: [
       "CGPA: 8.00",
-      "Coursework: Data Structures, Algorithms, DBMS, Operating Systems"
+      "Coursework: Data Structures and Algorithms (DSA), Operating Systems (OS), Database Management Systems (DBMS), Computer Networks (CN), System Design"
     ]
   }
 ];
