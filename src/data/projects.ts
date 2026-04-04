@@ -85,6 +85,33 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "DSA Canvas - Notion-Style LeetCode Tracker",
+    slug: "dsa-canvas",
+    period: "April 2026",
+    description: "A minimalist, fast, and fully local dashboard to track your Data Structures and Algorithms (DSA) progress with a Notion-inspired UI.",
+    longDescription: [
+      "A minimalist, fast, and fully local dashboard to track your Data Structures and Algorithms (DSA) progress.",
+      "Built with a sleek, Notion-inspired dark mode interface, it allows for seamless progress tracking with advanced bulk actions, custom lists, AI-powered hints, and zero dependencies on external databases.",
+      "Features include real-time statistics, advanced filtering by difficulty/topic/company, custom lists like 'Blind 75', and difficulty overrides.",
+      "Fully local persistence using compressed localStorage via lz-string, ensuring zero database setup.",
+      "Integrates with OpenRouter API for built-in AI hints using models like google/gemini-2.5-flash."
+    ],
+    features: [
+      "Notion-Inspired UI with dark mode and custom typography",
+      "Real-time progress statistics (Total, Easy, Medium, Hard)",
+      "Advanced filtering (Topics, Company tags, Difficulty, Status)",
+      "Custom question lists (e.g., 'Blind 75', 'Microsoft Interview')",
+      "Built-in AI Hints via OpenRouter API",
+      "Compressed local storage (lz-string) requiring zero database"
+    ],
+    technologies: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "Lucide React", "PapaParse", "LZ-String", "React Markdown"],
+    thumbnail: "/thumbnails/dsa-canvas.png",
+    links: {
+      visit: "https://dsa-company-wise-questions.vercel.app/",
+      source: "https://github.com/punyajain1/DSA_Canvas"
+    }
+  },
+  {
     title: "Intelliguide – AI-Powered Codeforces Profile Analyzer",
     slug: "intelliguide",
     period: "January, 2025",
@@ -103,6 +130,28 @@ export const projects: Project[] = [
     links: {
       visit: "https://intelliguide.vercel.app/",
       source: "https://github.com/punyajain1/Intelliguide"
+    }
+  },
+  {
+    title: "Job Frontend (Telegram Project)",
+    slug: "job-frontend-telegram",
+    period: "April 2026",
+    description: "A frontend interface tailored for a Telegram project to easily access and extract data while minimizing the cost of hosting an n8n workflow.",
+    longDescription: [
+      "This repository contains the frontend interface tailored for my Telegram project.",
+      "It is designed to provide easy access and data extraction capabilities while significantly minimizing the cost of hosting an n8n workflow.",
+      "It efficiently reuses the same existing hosted backend for its operations, ensuring optimal resource usage and seamless data handling."
+    ],
+    features: [
+      "Provides easy access and data extraction capabilities",
+      "Minimizes the cost of hosting an n8n workflow",
+      "Efficiently reuses existing hosted backend"
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "Lucide React", "PapaParse"],
+    thumbnail: "/thumbnails/job-extractor.png",
+    links: {
+      visit: "",
+      source: "https://github.com/punyajain1/job_extractor_fe"
     }
   },
   {
