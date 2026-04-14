@@ -10,3 +10,4 @@ export { default as ProjectCard } from './ProjectCard';
 export { default as ProjectDetailClient } from './ProjectDetailClient';
 export { default as FadeIn } from './FadeIn';
 export { default as EasterEgg } from './EasterEgg';
+export { default as GithubHeatmap } from './GithubHeatmap';

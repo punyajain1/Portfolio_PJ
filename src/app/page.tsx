@@ -1,6 +1,6 @@
 'use client';
 
-import { Header, Stack, Projects, Footer, Experience, Contact, Navbar, Education } from '@/components';
+import { Header, Stack, Projects, Footer, Experience, Contact, Navbar, Education, GithubHeatmap } from '@/components';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -45,6 +45,10 @@ export default function Home() {
 
           <motion.div variants={item} id="projects" className="scroll-mt-24">
             <Projects />
+          </motion.div>
+
+          <motion.div variants={item} id="contributions" className="scroll-mt-24">
+            <GithubHeatmap />
           </motion.div>
 
           <motion.div variants={item} id="contact" className="scroll-mt-24">
