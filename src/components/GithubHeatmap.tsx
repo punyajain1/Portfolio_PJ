@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 type Contribution = {
@@ -20,8 +20,30 @@ export default function GithubHeatmap() {
   const [data, setData] = useState<GithubData | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const [showPunk, setShowPunk] = useState(false);
+  const keysRef = React.useRef('');
+
   useEffect(() => {
-    // Fetch directly from the public API since no token is required
+    const handler = (e: KeyboardEvent) => {
+      // Only care about single character keys
+      if (e.key.length === 1) {
+        keysRef.current += e.key.toLowerCase();
+      }
+
+      if (keysRef.current.length > 4) {
+        keysRef.current = keysRef.current.slice(-4);
+      }
+      
+      if (keysRef.current === 'punk') {
+        setShowPunk((prev) => !prev);
+        keysRef.current = '';
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
+  useEffect(() => {
     fetch('https://github-contributions-api.jogruber.de/v4/punyajain1?y=last')
       .then((res) => res.json())
       .then((json) => {
@@ -35,7 +57,6 @@ export default function GithubHeatmap() {
   }, []);
 
   const getLevelColor = (level: number) => {
-    // Official GitHub Contribution Colors
     switch (level) {
       case 1:
         return 'bg-emerald-200 dark:bg-emerald-900/70';
@@ -46,14 +67,13 @@ export default function GithubHeatmap() {
       case 4:
         return 'bg-emerald-500 dark:bg-emerald-400';
       default:
-        return 'bg-zinc-100 dark:bg-zinc-800/40'; // 0 level
+        return 'bg-zinc-100 dark:bg-zinc-800/40';
     }
   };
 
   const currentYearTotal = data?.total?.lastYear || 0;
   const startOffset = data?.contributions?.length ? new Date(data.contributions[0].date).getDay() : 0;
 
-  // Calculate where month labels should be placed
   const getMonthLabels = () => {
     if (!data?.contributions.length) return [];
     const labels: { label: string; index: number }[] = [];
@@ -63,7 +83,6 @@ export default function GithubHeatmap() {
       const date = new Date(day.date);
       const month = date.getMonth();
       if (month !== currentMonth) {
-        // Prevent label overlap at the very start
         if (i > 15 || labels.length === 0) {
           labels.push({
             label: date.toLocaleString('default', { month: 'short' }),
@@ -78,9 +97,26 @@ export default function GithubHeatmap() {
 
   return (
     <section className="mb-16">
-      <h2 className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
-        GitHub Contributions <span className="text-zinc-400 font-normal">#</span>
-      </h2>
+      <div className="flex flex-col sm:flex-row items-baseline gap-2 mb-6">
+        <h2 className="text-lg font-bold text-black dark:text-white flex items-center gap-2">
+          {showPunk ? 'Indie Hacker Protocol 🚀' : 'GitHub Contributions'} <span className="text-zinc-400 font-normal">#</span>
+        </h2>
+        {showPunk && (
+          <motion.a
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            href="https://x.com/PunkCompiler"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:ml-auto flex items-center gap-1.5 text-xs sm:text-sm text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors"
+          >
+            <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.96z"></path>
+            </svg>
+            @PunkCompiler
+          </motion.a>
+        )}
+      </div>
 
       <div className="w-full">
         <div>
@@ -96,7 +132,6 @@ export default function GithubHeatmap() {
                   className="inline-flex flex-col"
                   style={{ direction: 'ltr' }}
                 >
-                  {/* Months Row */}
                   <div className="relative h-5 text-[10px] text-zinc-500 dark:text-zinc-500 mb-1">
                     {getMonthLabels().map((m, i) => (
                       <span
@@ -109,9 +144,7 @@ export default function GithubHeatmap() {
                     ))}
                   </div>
 
-                  {/* Contributions Grid */}
                   <div className="grid grid-rows-7 grid-flow-col gap-[3px] sm:gap-[4px]">
-                    {/* Add empty blocks to offset the first day */}
                     {Array.from({ length: startOffset }).map((_, i) => (
                       <div
                         key={`empty-${i}`}
