@@ -1,94 +1,105 @@
-# 🚀 Punya's Digital Portfolio
+# Punya's Digital Portfolio
 
-Welcome to my corner of the internet! 👋 A sleek, typewriter-inspired portfolio that combines nostalgia with modern web development. Built with love, caffeine, and lots of code.
+![Next.js](https://img.shields.io/badge/Next.js-15.5-black?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-black?logo=framer&logoColor=white)
 
-## ✨ What Makes This Special
+A minimalist, highly responsive personal portfolio website built with modern web technologies.
 
-- **📝 Retro Vibes**: Clean typewriter aesthetic that makes code look like poetry
-- **🎨 Minimalist Magic**: Sometimes less is more (but we made it look effortless)
-- **📱 Responsive Excellence**: Looks amazing whether you're on a phone or a 4K monitor
-- **⚡ Modern Performance**: Next.js 15 powering lightning-fast experiences
-- **🔧 Developer Friendly**: TypeScript + Tailwind CSS = Happy coding experience
+## Key Features
 
-## 🗂️ What's Inside
+- **Responsive Design:** Fully fluid layouts tailored for both mobile and desktop views using Tailwind CSS.
+- **Micro-Animations:** Fluid, interactive motion states powered by Framer Motion.
+- **Server-Side Rendering:** Utilizing Next.js App Router for optimal load times and SEO.
+- **Static Content Handling:** Well-defined type-safe static content pipeline.
+- **Type Safety:** 100% written in TypeScript for predictable, bug-free behavior.
 
-- **👋 Hello World**: Personal introduction with a dash of personality
-- **💻 Tech Arsenal**: Programming languages I speak fluently (and some I'm still learning!)
-- **🛠️ Skills Showcase**: The tools and frameworks in my developer toolkit
-- **💼 Professional Journey**: Where I've been and what I've built
-- **🎯 Project Gallery**: Cool things I've created (some might surprise you!)
-- **🏆 Certifications**: Official proof that I know what I'm talking about
-- **🌟 Achievements**: Moments that made me proud (and hopefully impress you too!)
+## Architecture
 
-## 🚀 Quick Start Guide
+```mermaid
+graph TD
+    Client[Client Browser] --> NextJS[Next.js App Router]
+    
+    subgraph Frontend [Frontend Architecture]
+        NextJS --> Pages[Pages & Routing]
+        NextJS --> UI[UI Components]
+        UI --> Animations[Framer Motion Animations]
+        UI --> Styling[Tailwind CSS]
+        UI --> Icons[Lucide / Custom Icons]
+    end
+    
+    subgraph Data [Content Management]
+        Pages --> StaticData[Static Data / projects.ts]
+    end
+```
 
-Ready to explore? Here's how to get this beauty running locally:
+## Project Structure
 
-### 📋 What You'll Need
+- `src/app/` - Next.js 15 App Router pages, global layouts, and endpoints.
+- `src/components/` - Reusable UI sections, specific widgets & Framer modules (e.g. `Projects.tsx`, `Header.tsx`).
+- `src/data/` - Flat file static assets containing data strings & definitions (like `projects.ts`).
+- `src/lib/` - Shared helper functions and utility integrations (e.g. `utils.ts`).
+- `src/context/` - React Context providers globally mounted to handle things like Theme contextual state.
 
-- Node.js 18+ (the newer, the better!)
-- npm (your faithful package manager)
-- A curious mind (most important!)
+## Tech Stack
 
-### 🔧 Setup Magic
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion, Rough Notation
+- **Icons:** Lucide React
+- **Data Fetching/State:** SWR, React Query
 
-1. **Clone this masterpiece**
+## Local Setup
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
    ```bash
-   git clone [your-repo-url]
+   git clone <repository-url>
    cd portfolio_pj
    ```
 
-2. **Install the dependencies** (grab a coffee, this might take a moment ☕)
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Fire up the development server** 🔥
+3. **Start the development server:**
    ```bash
    npm run dev
    ```
 
-4. **Open your browser** and visit [http://localhost:3000](http://localhost:3000)
-   
-   🎉 **Voilà!** You should see the magic happening!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🎯 Available Commands
+## Available Scripts
 
-- `npm run dev` - Start the development party 🎉
-- `npm run build` - Build for production (make it shine! ✨)
-- `npm run start` - Launch the production version
-- `npm run lint` - Keep the code clean and happy 🧹
+- `npm run dev` - Starts the development server.
+- `npm run build` - Creates an optimized production build.
+- `npm run start` - Starts the production server.
+- `npm run lint` - Runs ESLint to check for code issues.
 
-## 🎨 Make It Yours
+## Customization
 
-Want to customize this portfolio? Here's your roadmap to personalization:
+To make this your own:
 
-1. **Content Updates**: Head to `src/app/page.tsx` and make it uniquely you
-2. **Personal Touch**: Update your info, skills, projects, and all the good stuff
-3. **Social Connections**: Don't forget to update those social media links!
-4. **Style Tweaks**: Feel free to play with `src/app/globals.css` (but remember, with great power...)
+1. Update `src/data/projects.ts` with your own project metadata, URLs, and skills.
+2. Edit the hero section bio and work history in `src/app/page.tsx` or respective components (e.g. `Experience.tsx`, `Education.tsx`).
+3. Replace the placeholder resume/social links across the top `Navbar.tsx` and `Footer.tsx`.
 
-*Pro tip: This design is intentionally minimal - sometimes the best portfolios let your work do the talking! 💼*
+## Deployment
 
-## 🛠️ Tech Stack (The Dream Team)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
 
-- **Next.js 15** - The React framework that makes everything possible 🚀
-- **TypeScript** - Because we like our bugs caught at compile time, not runtime 🐛
-- **Tailwind CSS** - Utility-first styling that's as addictive as it is powerful 🎨
-- **Courier Prime** - The typewriter font that brings vintage vibes to modern web ✍️
+1. Push your code to a GitHub repository.
+2. Import the project into Vercel.
+3. Vercel will automatically detect the Next.js framework and configure the build settings.
+4. Click **Deploy**.
 
-## 💡 Design Philosophy
-
-This portfolio draws inspiration from the golden age of typewriters - when every word mattered and aesthetics were beautifully simple. It's a love letter to minimalism in a world of digital noise.
-
-**The Goal?** Let your work speak for itself while creating an experience that's both memorable and professional.
-
----
-
-## 🤝 Let's Connect!
-
-Enjoyed exploring this portfolio? I'd love to hear from you! Whether you want to collaborate, chat about tech, or just say hi - don't be a stranger.
-
-**Built with ❤️ by Punya Jain**
-
-*P.S. - Yes, I did have fun writing this README. Code should be serious, but documentation can have personality! 😊*
+For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
