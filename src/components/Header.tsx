@@ -142,7 +142,7 @@ export default function Header() {
               className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             >
               <Link
-                href="https://drive.google.com/file/d/1kFaviHrQ3bLybeO2jkUGOoXxQm36RJVs/view?usp=sharing"
+                href="https://drive.google.com/file/d/1UfmxOOxK21mxUFX3aHko8NGzayAgADGo/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Resume"

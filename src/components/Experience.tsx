@@ -2,25 +2,26 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const experiences = [
   {
     company: "Starportal",
-    role: "Software Developer",
-    period: "June 2025 - July 2025",
+    role: "Software Engineer Intern",
+    period: "June 2025 - August 2025",
+    certificateUrl: "https://drive.google.com/file/d/1h5vX6C0cmuEwbTLA23dBae04DRYpndVJ/view?usp=drive_link",
     description: [
       "Developed scalable web systems using React, TypeScript, Node.js and integrated backend REST APIs",
       "Built reusable UI components and improved application performance through optimized rendering and state management for AWS-hosted services",
       "Built and integrated scalable backend APIs using Node.js, managing data with PostgreSQL and optimized SQL queries on AWS"
     ],
-    technologies: ["React", "TypeScript", "Framer Motion", "Tailwind CSS" , "AWS"]
+    technologies: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "AWS"]
   },
   {
     company: "Startup",
-    role: "Backend & Software Developer",
-    period: "July 2025 - August 2025",
+    role: "Backend Engineer",
+    period: "August 2025 - September 2025",
     description: [
       "Migrated databases to PostgreSQL and optimized backend performance with Node.js and Prisma.",
       "Optimized backend services and database queries using SQL improving analytics workload performance on AWS infrastructure",
@@ -84,15 +85,27 @@ export default function Experience() {
                         ))}
                       </ul>
 
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-1 text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 rounded-md border border-zinc-200 dark:border-zinc-700"
+                      <div className="flex flex-wrap gap-2 items-center justify-between">
+                        <div className="flex flex-wrap gap-2">
+                          {exp.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-1 text-xs font-mono text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 rounded-md border border-zinc-200 dark:border-zinc-700"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                        {exp.certificateUrl && (
+                          <a
+                            href={exp.certificateUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-mono text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 flex items-center gap-1 transition-colors"
                           >
-                            {tech}
-                          </span>
-                        ))}
+                            View Certificate <ExternalLink size={12} />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </motion.div>

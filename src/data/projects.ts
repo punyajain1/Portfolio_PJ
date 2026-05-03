@@ -39,7 +39,7 @@ export const projects: Project[] = [
     thumbnail: "/thumbnails/job-scraper.png",
     links: {
       visit: "https://www.linkedin.com/posts/punya-jain-40ab8b2a6_weekendbuild-sideproject-automation-activity-7424499791511834624-8KQa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEnbeIoBRywPkBn1AHndpUOWWPCLSk-hfEU",
-      source: "https://github.com/punyajain1/JOB_SCRAPPER"
+      source: "https://github.com/punyajain1/JOB_SCRAPPER_TelegramBot"
     }
   },
   {
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "Lucide React", "PapaParse"],
     thumbnail: "/thumbnails/job-extractor.png",
     links: {
-      visit: "",
+      visit: "https://apply-flow-six.vercel.app/",
       source: "https://github.com/punyajain1/job_extractor_fe"
     }
   },
