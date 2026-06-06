@@ -98,7 +98,7 @@ export default function GithubHeatmap() {
   return (
     <section className="mb-16">
       <div className="flex flex-col sm:flex-row items-baseline gap-2 mb-6">
-        <h2 className="text-lg font-bold text-black dark:text-white flex items-center gap-2">
+        <h2 id="contributions-heading" className="text-lg font-bold text-black dark:text-white flex items-center gap-2">
           {showPunk ? 'Indie Hacker Protocol 🚀' : 'GitHub Contributions'} <span className="text-zinc-400 font-normal">#</span>
         </h2>
         {showPunk && (

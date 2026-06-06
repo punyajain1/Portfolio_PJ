@@ -72,7 +72,7 @@ export default function Header() {
       <div className="relative w-full h-[200px] sm:h-[270px] rounded-2xl overflow-hidden mb-[-40px] sm:mb-[-50px] z-0">
         <Image
           src="/banner.jpg"
-          alt="Banner"
+          alt="Punya Jain's developer workspace — building AI tools and full-stack apps"
           fill
           className="object-cover"
           priority
@@ -91,7 +91,7 @@ export default function Header() {
           <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white dark:border-background bg-zinc-100 dark:bg-zinc-800 overflow-hidden transform translate-y-2">
             <Image
               src={isDarkMode ? "/punya.jpg" : "/punya_2.jpg"}
-              alt="Punya Jain"
+              alt="Punya Jain — Full-Stack and AI developer based in Delhi, India"
               fill
               className="object-cover"
               sizes="(max-width: 640px) 96px, 128px"

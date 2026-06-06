@@ -15,7 +15,7 @@ const education = [
 export default function Education() {
   return (
     <section className="mb-16">
-      <h2 className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
+      <h2 id="education-heading" className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
         Education <span className="text-zinc-400 font-normal">#</span>
       </h2>
 

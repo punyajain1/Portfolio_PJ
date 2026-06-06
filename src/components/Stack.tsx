@@ -12,7 +12,7 @@ const skills = [
 export default function Stack() {
   return (
     <section className="mb-16" id="stack">
-      <h2 className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
+      <h2 id="stack-heading" className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
         Skills <span className="text-zinc-400 font-normal">#</span>
       </h2>
 

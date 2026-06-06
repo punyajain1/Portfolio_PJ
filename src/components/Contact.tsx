@@ -41,7 +41,7 @@ export default function Contact() {
 
   return (
     <section className="mb-12 mt-8" id="contact">
-      <h2 className="text-3xl font-serif italic text-black dark:text-white mb-6">
+      <h2 id="contact-heading" className="text-3xl font-serif italic text-black dark:text-white mb-6">
         Get in Touch
       </h2>
 
