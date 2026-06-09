@@ -1,7 +1,6 @@
 export interface Project {
   title: string;
   slug: string;
-  period: string;
   description: string;
   longDescription: string[];
   features: string[];
@@ -18,7 +17,6 @@ export const projects: Project[] = [
   {
     title: "Job Scraper Automation System",
     slug: "job-scraper",
-    period: "Feb-2026",
     description: "Developed an automated job aggregation tool that scrapes listings from 8+ job boards (Indeed, LinkedIn, Naukri, Internshala, etc.) and delivers results via email using n8n workflow automation.",
     longDescription: [
       "An intelligent job scraping automation system that aggregates job postings from multiple platforms simultaneously and delivers them directly to email.",
@@ -45,7 +43,6 @@ export const projects: Project[] = [
   {
     title: "Autonomous AI Email Agent",
     slug: "ai-mail-agent",
-    period: "June, 2025",
     description: "An AI Agent that reads important mails and writes the suitable replies while saving summary of mails in a csv file.",
     longDescription: ["Developed an intelligent email assistant using Node.js and TypeScript to automate email management.", "Integrated with Gmail API to securely access and scan incoming messages.", "Utilized OpenAI's language models to generate context-aware reply drafts for important emails.", "Implemented logic to identify relevant emails based on context and sender.", "Streamlined email workflow, reducing time spent on repetitive responses and ensuring timely communication."],
     features: [
@@ -66,7 +63,6 @@ export const projects: Project[] = [
   {
     title: "Agentic RAG Document Intelligence System",
     slug: "ai-rag-agent",
-    period: "May, 2025",
     description: "A research assistant tool that leverages AI to help users to ask any question and get answer to it from any of users uploaded documents.",
     longDescription: ["Developed a Retrieval-Augmented Generation (RAG) AI agent using LangChain to enable efficient querying of legal", "documents and research papers.", "Implemented parsing and chunking of PDF and TXT files to optimize document retrieval processes.", "Utilized in-memory storage solutions to ensure fast access to document chunks during query processing.", "Implemented query handling and answer generation to deliver accurate, contextually relevant responses based", "solely on uploaded document content."],
     features: [
@@ -85,9 +81,79 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "Detour",
+    slug: "detour",
+    description: "A full-stack application providing an educational, curated feed of information from scientific and technical sources.",
+    longDescription: [
+      "Detour is a full-stack application designed to provide an educational, curated feed of information.",
+      "It aggregates and presents content from various scientific and technical sources in an engaging format.",
+      "The project involves a robust data processing architecture to sync and curate feeds efficiently."
+    ],
+    features: [
+      "Curated educational feed",
+      "Aggregation from scientific and technical sources",
+      "Robust data processing architecture",
+      "Feed synchronization system",
+      "Engaging user interface"
+    ],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+    thumbnail: "/thumbnails/detour.png",
+    links: {
+      visit: "",
+      source: "https://github.com/punyajain1/Detour"
+    }
+  },
+  {
+    title: "FinPilot",
+    slug: "finpilot",
+    description: "A scalable AI-based financial advisory backend delivering portfolio analysis, market news aggregation, and sentiment scoring.",
+    longDescription: [
+      "FinPilot is an AI-based financial advisory backend built with Node.js, Express, TypeScript, and PostgreSQL.",
+      "It delivers advanced portfolio analysis, real-time market news aggregation, and sophisticated sentiment scoring.",
+      "Integrates an AI chatbot powered by Llama to provide smart investment insights specifically focused on crypto and metals."
+    ],
+    features: [
+      "AI-powered financial advisory and portfolio analysis",
+      "Real-time market news aggregation",
+      "Sentiment scoring for investments",
+      "Llama-powered AI chatbot integration",
+      "Focus on crypto and metals markets",
+      "Scalable backend architecture"
+    ],
+    technologies: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Llama AI"],
+    thumbnail: "/thumbnails/Finpilot.png",
+    links: {
+      visit: "https://fin-pilot-backend-api.vercel.app/",
+      source: "https://github.com/punyajain1/FinPilot-Backend-API"
+    }
+  },
+  {
+    title: "BackdoorCity",
+    slug: "backdoorcity",
+    description: "A minimalist, community-driven city guide to discover and share the best hidden spots curated by locals.",
+    longDescription: [
+      "BackdoorCity is a minimalist, community-driven city guide for India.",
+      "It allows users to discover and share the best hidden spots—cafes, parks, events, and more—curated by locals, for locals.",
+      "The platform operates without algorithms or ads, offering real picks. It features a frictionless experience where users can submit spots via a one-time code (OTP) without creating an account."
+    ],
+    features: [
+      "Community-driven hidden spot discovery",
+      "Frictionless submission with OTP (no account required)",
+      "Minimalist Notion-inspired aesthetic",
+      "Spot browsing by city and vibe (Eat, Chill, Play)",
+      "Upvoting and review system",
+      "No algorithms or ads"
+    ],
+    technologies: ["Next.js 16", "React 19", "Tailwind CSS v4", "TypeScript", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
+    thumbnail: "/thumbnails/backdoorcity.png",
+    links: {
+      visit: "https://backdoor-city.vercel.app/",
+      source: "https://github.com/punyajain1/BackdoorCity"
+    }
+  },
+  {
     title: "DSA Canvas - Notion-Style LeetCode Tracker",
     slug: "dsa-canvas",
-    period: "April 2026",
     description: "A minimalist, fast, and fully local dashboard to track your Data Structures and Algorithms (DSA) progress with a Notion-inspired UI.",
     longDescription: [
       "A minimalist, fast, and fully local dashboard to track your Data Structures and Algorithms (DSA) progress.",
@@ -114,7 +180,6 @@ export const projects: Project[] = [
   {
     title: "Intelliguide – AI-Powered Codeforces Profile Analyzer",
     slug: "intelliguide",
-    period: "January, 2025",
     description: "A Smart AI powered Codeforces profile analyzer.",
     longDescription: ["Over 600 usages and 400+ new users in 48 hours.", "Integrated Codeforces and OpenAI APIs to generate personalized skill enhancement strategies and automated", "performance insights, streamlining manual analysis tasks by 90%", "Developed full-stack platform with Next.js, MongoDB, and Tailwind CSS, delivering cross-device responsive design and seamless", "user experience for competitive programmers worldwide", "Empowered competitive programmers by identifying weaknesses and enhancing problem-solving skills."],
     features: [
@@ -133,9 +198,8 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "Job Frontend (Telegram Project)",
-    slug: "job-frontend-telegram",
-    period: "April 2026",
+    title: "ApplyFlow",
+    slug: "apply-flow",
     description: "A frontend interface tailored for a Telegram project to easily access and extract data while minimizing the cost of hosting an n8n workflow.",
     longDescription: [
       "This repository contains the frontend interface tailored for my Telegram project.",
@@ -151,13 +215,12 @@ export const projects: Project[] = [
     thumbnail: "/thumbnails/job-extractor.png",
     links: {
       visit: "https://apply-flow-six.vercel.app/",
-      source: "https://github.com/punyajain1/job_extractor_fe"
+      source: "https://github.com/punyajain1/ApplyFlow-fe"
     }
   },
   {
     title: "Brainly",
     slug: "brainly",
-    period: "December 2024",
     description: "A Full Stack web application helps user to save any important link or content at one place for easy access.",
     longDescription: ["Brainly is a fully-fledged web application that helps users save and revisit their favorite content across platforms.", "This application allows users to save YouTube videos, Twitter links, and expands to include Spotify and LinkedIn", "posts so that they can easily view them later.", "It has a secure login and signup system for user authentication and data privacy.", "I used Zod for input validation and bcrypt for password hashing on the server-side."],
     features: [
@@ -180,7 +243,6 @@ export const projects: Project[] = [
   {
     title: "Chess",
     slug: "chess",
-    period: "December 2024",
     description: "Full Stack Chess Game",
     longDescription: ["Real-Time Multiplayer: Supports live chess matches with real-time communication using WebSockets.", "Game Logic with Chess.js: Utilizes Chess.js for robust move validation and chessboard state management.", "Modern Frontend with React: Built with React for a responsive and interactive user interface.", "Type-Safe Backend: Developed in Node.js with TypeScript, ensuring scalability and maintainability.", "Seamless Synchronization: Moves are instantly reflected on both players' boards for a smooth gaming experience."],
     features: [
@@ -203,7 +265,6 @@ export const projects: Project[] = [
   {
     title: "ChatSphere",
     slug: "chat-sphere",
-    period: "November 2024",
     description: "",
     longDescription: ["Enables smooth communication with instant message delivery and a user-friendly interface, making it interactive.", "The backend efficiently manages connections and message routing.", "Frontend powered by React ensures smooth, dynamic user interactions.", "It is an ongoing project with plans for implementing end-to-end encryption and a secure login system for complete privacy and functionality.", "A simple chat application with a tremendous scope for development and evolution."],
     features: [
@@ -226,7 +287,6 @@ export const projects: Project[] = [
   {
     title: "Bolt Clone",
     slug: "bolt-clone",
-    period: "February 2024",
     description: "An AI-powered website builder that generates fully functional websites based on user prompts.",
     longDescription: ["An AI-powered website builder that generates fully functional websites based on user prompts.", "Utilizes OpenAI’s API and custom prompting techniques to create tailored website designs and content.", "React and TypeScript ensure a dynamic, interactive frontend, while Express and Node.js handle backend processing.", "Designed for scalability, allowing users to generate anything from landing pages to full-fledged applications."],
     features: [
