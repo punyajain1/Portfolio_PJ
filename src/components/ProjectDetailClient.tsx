@@ -4,22 +4,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { useTheme } from '@/context/ThemeContext';
-
-interface Project {
-  slug: string;
-  title: string;
-  description: string;
-  thumbnail?: string;
-  period: string;
-  technologies: string[];
-  longDescription: string[];
-  features: string[];
-  links: {
-    visit?: string;
-    source?: string;
-  };
-  images?: string[];
-}
+import { Project } from '../data/projects';
 
 interface ProjectDetailClientProps {
   project: Project;
@@ -66,7 +51,6 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-black dark:text-[#f0f6fc]">{project.title}</h1>
-                <p className="text-zinc-600 dark:text-[#8b949e] text-sm sm:text-base">Period: {project.period}</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-4 md:mt-0">
