@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const experiences = [
   {
     company: "Starportal",
-    role: "Software Engineer Intern",
+    role: "Software Development Engineer Intern",
     period: "June 2025 - August 2025",
     certificateUrl: "https://drive.google.com/file/d/1h5vX6C0cmuEwbTLA23dBae04DRYpndVJ/view?usp=drive_link",
     description: [
