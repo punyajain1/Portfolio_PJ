@@ -34,7 +34,7 @@ export default function Contact() {
     },
     {
       name: 'X (Twitter)',
-      url: 'https://x.com/PunyaJain01',
+      url: 'https://x.com/PunkCompiler',
       icon: <Twitter className="w-5 h-5" />,
     },
   ];

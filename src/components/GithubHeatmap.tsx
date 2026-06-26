@@ -33,7 +33,7 @@ export default function GithubHeatmap() {
       if (keysRef.current.length > 4) {
         keysRef.current = keysRef.current.slice(-4);
       }
-      
+
       if (keysRef.current === 'punk') {
         setShowPunk((prev) => !prev);
         keysRef.current = '';

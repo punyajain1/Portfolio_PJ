@@ -51,7 +51,7 @@ export default function Header() {
     },
     {
       name: "X (Twitter)",
-      url: "https://x.com/PunyaJain01",
+      url: "https://x.com/PunkCompiler",
       icon: <Twitter className="w-full h-full text-zinc-900 dark:text-zinc-100" />,
     },
     {

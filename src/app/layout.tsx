@@ -102,7 +102,7 @@ const personSchema = {
   sameAs: [
     'https://github.com/punyajain1',
     'https://linkedin.com/in/punya-jain-40ab8b2a6',
-    'https://x.com/PunyaJain01',
+    'https://x.com/PunkCompiler',
   ],
   knowsAbout: [
     'React',
