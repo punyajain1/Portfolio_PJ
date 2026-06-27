@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Check, Copy, Coffee } from 'lucide-react';
+import { Mail, Github, Linkedin, Check, Copy, Coffee } from 'lucide-react';
+import { XIcon } from '@/components/ui/XIcon';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { cn } from "@/lib/utils";
@@ -35,7 +36,7 @@ export default function Contact() {
     {
       name: 'X (Twitter)',
       url: 'https://x.com/PunkCompiler',
-      icon: <Twitter className="w-5 h-5" />,
+      icon: <XIcon className="w-5 h-5" />,
     },
   ];
 

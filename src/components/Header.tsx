@@ -4,7 +4,8 @@
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import Image from 'next/image';
-import { BadgeCheck, Sun, Moon, Github, Linkedin, Twitter, Coffee, FileText } from 'lucide-react';
+import { BadgeCheck, Sun, Moon, Github, Linkedin, Coffee, FileText } from 'lucide-react';
+import { XIcon } from '@/components/ui/XIcon';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useTheme } from '@/context/ThemeContext';
@@ -52,7 +53,7 @@ export default function Header() {
     {
       name: "X (Twitter)",
       url: "https://x.com/PunkCompiler",
-      icon: <Twitter className="w-full h-full text-zinc-900 dark:text-zinc-100" />,
+      icon: <XIcon className="w-full h-full text-zinc-900 dark:text-zinc-100" />,
     },
     {
       name: "LinkedIn",
