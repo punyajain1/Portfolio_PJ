@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       'Building AI tools, automation systems, and full-stack apps. CS undergrad from Delhi. Open to collaborations.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/banner.jpg',
         width: 1200,
         height: 630,
         alt: 'Punya Jain — Full-Stack & AI Developer',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description:
       'Building in public — AI tools, automation, and full-stack with Next.js & TypeScript.',
     creator: '@PunyaJain01',
-    images: ['/og-image.png'],
+    images: ['/banner.jpg'],
   },
 
   robots: {

@@ -41,6 +41,30 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "FinPilot",
+    slug: "finpilot",
+    description: "A scalable AI-based financial advisory backend delivering portfolio analysis, market news aggregation, and sentiment scoring.",
+    longDescription: [
+      "FinPilot is an AI-based financial advisory backend built with Node.js, Express, TypeScript, and PostgreSQL.",
+      "It delivers advanced portfolio analysis, real-time market news aggregation, and sophisticated sentiment scoring.",
+      "Integrates an AI chatbot powered by Llama to provide smart investment insights specifically focused on crypto and metals."
+    ],
+    features: [
+      "AI-powered financial advisory and portfolio analysis",
+      "Real-time market news aggregation",
+      "Sentiment scoring for investments",
+      "Llama-powered AI chatbot integration",
+      "Focus on crypto and metals markets",
+      "Scalable backend architecture"
+    ],
+    technologies: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Llama AI"],
+    thumbnail: "/thumbnails/Finpilot.png",
+    links: {
+      visit: "https://fin-pilot-backend-api.vercel.app/",
+      source: "https://github.com/punyajain1/FinPilot-Backend-API"
+    }
+  },
+  {
     title: "Autonomous AI Email Agent",
     slug: "ai-mail-agent",
     description: "An AI Agent that reads important mails and writes the suitable replies while saving summary of mails in a csv file.",
@@ -101,30 +125,6 @@ export const projects: Project[] = [
     links: {
       visit: "",
       source: "https://github.com/punyajain1/Detour"
-    }
-  },
-  {
-    title: "FinPilot",
-    slug: "finpilot",
-    description: "A scalable AI-based financial advisory backend delivering portfolio analysis, market news aggregation, and sentiment scoring.",
-    longDescription: [
-      "FinPilot is an AI-based financial advisory backend built with Node.js, Express, TypeScript, and PostgreSQL.",
-      "It delivers advanced portfolio analysis, real-time market news aggregation, and sophisticated sentiment scoring.",
-      "Integrates an AI chatbot powered by Llama to provide smart investment insights specifically focused on crypto and metals."
-    ],
-    features: [
-      "AI-powered financial advisory and portfolio analysis",
-      "Real-time market news aggregation",
-      "Sentiment scoring for investments",
-      "Llama-powered AI chatbot integration",
-      "Focus on crypto and metals markets",
-      "Scalable backend architecture"
-    ],
-    technologies: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Llama AI"],
-    thumbnail: "/thumbnails/Finpilot.png",
-    links: {
-      visit: "https://fin-pilot-backend-api.vercel.app/",
-      source: "https://github.com/punyajain1/FinPilot-Backend-API"
     }
   },
   {
