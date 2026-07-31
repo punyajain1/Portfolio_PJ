@@ -65,26 +65,6 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "Autonomous AI Email Agent",
-    slug: "ai-mail-agent",
-    description: "An AI Agent that reads important mails and writes the suitable replies while saving summary of mails in a csv file.",
-    longDescription: ["Developed an intelligent email assistant using Node.js and TypeScript to automate email management.", "Integrated with Gmail API to securely access and scan incoming messages.", "Utilized OpenAI's language models to generate context-aware reply drafts for important emails.", "Implemented logic to identify relevant emails based on context and sender.", "Streamlined email workflow, reducing time spent on repetitive responses and ensuring timely communication."],
-    features: [
-      "Gmail API integration for secure email access",
-      "AI-powered context-aware reply generation",
-      "Intelligent email filtering and prioritization",
-      "Automated email summary generation to CSV",
-      "Context and sender-based email identification",
-      "Automated workflow for repetitive responses"
-    ],
-    technologies: ["Node.js", "TypeScript", "OpenAI", "Gmail API", "LangChain"],
-    thumbnail: "/thumbnails/AI_GMAIL_AGENT.png",
-    links: {
-      visit: "https://www.youtube.com/watch?v=0GxjRceqKSc",
-      source: "https://github.com/punyajain1/AI_Gmail_Agent"
-    }
-  },
-  {
     title: "Agentic RAG Document Intelligence System",
     slug: "ai-rag-agent",
     description: "A research assistant tool that leverages AI to help users to ask any question and get answer to it from any of users uploaded documents.",
@@ -100,8 +80,28 @@ export const projects: Project[] = [
     technologies: ["Python", "LangChain", "PyPDF2", "OpenAI"],
     thumbnail: "/thumbnails/AI_RAG_AGENT.png",
     links: {
-      visit: "https://gpt-neural-visualizer.vercel.app/",
-      source: "https://github.com/punyajain/GraphGPT"
+      visit: "https://www.linkedin.com/posts/punya-jain-40ab8b2a6_rag-langchain-ai-ugcPost-7333916999497981953-GsqZ/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEnbeIoBRywPkBn1AHndpUOWWPCLSk-hfEU",
+      source: "https://github.com/punyajain1/AI_RAG_AGENT"
+    }
+  },
+  {
+    title: "Autonomous AI Email Agent",
+    slug: "ai-mail-agent",
+    description: "An AI Agent that reads important mails and writes the suitable replies while saving summary of mails in a csv file.",
+    longDescription: ["Developed an intelligent email assistant using Node.js and TypeScript to automate email management.", "Integrated with Gmail API to securely access and scan incoming messages.", "Utilized OpenAI's language models to generate context-aware reply drafts for important emails.", "Implemented logic to identify relevant emails based on context and sender.", "Streamlined email workflow, reducing time spent on repetitive responses and ensuring timely communication."],
+    features: [
+      "Gmail API integration for secure email access",
+      "AI-powered context-aware reply generation",
+      "Intelligent email filtering and prioritization",
+      "Automated email summary generation to CSV",
+      "Context and sender-based email identification",
+      "Automated workflow for repetitive responses"
+    ],
+    technologies: ["Node.js", "TypeScript", "OpenAI", "Gmail API", "LangChain"],
+    thumbnail: "/thumbnails/AI_GMAIL_AGENT.png",
+    links: {
+      visit: "https://www.linkedin.com/posts/punya-jain-40ab8b2a6_ai-openai-langchain-ugcPost-7331032549923753987-04RY/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEnbeIoBRywPkBn1AHndpUOWWPCLSk-hfEU",
+      source: "https://github.com/punyajain1/AI_Gmail_Agent"
     }
   },
   {
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
     thumbnail: "/thumbnails/detour.png",
     links: {
-      visit: "",
+      visit: "https://detour-clp4.vercel.app/",
       source: "https://github.com/punyajain1/Detour"
     }
   },

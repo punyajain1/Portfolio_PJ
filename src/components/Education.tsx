@@ -14,7 +14,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section className="mb-16">
+    <section className="mb-12">
       <h2 id="education-heading" className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
         Education <span className="text-zinc-400 font-normal">#</span>
       </h2>
@@ -37,7 +37,7 @@ export default function Education() {
             </div>
 
             <div className="px-4 pb-4">
-              <ul className="list-disc list-inside space-y-1 text-sm text-zinc-600 dark:text-zinc-400 marker:text-zinc-300 dark:marker:text-zinc-700">
+              <ul className="list-disc pl-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400 marker:text-zinc-300 dark:marker:text-zinc-700">
                 {edu.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}

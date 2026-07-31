@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const email = "punyajain1@gmail.com";
+  const email = "punya01155@gmail.com";
 
   const onCopy = async () => {
     try {
@@ -41,7 +41,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="mb-12 mt-8" id="contact">
+    <section className="mb-12" id="contact">
       <h2 id="contact-heading" className="text-3xl font-serif italic text-black dark:text-white mb-6">
         Get in Touch
       </h2>
@@ -51,9 +51,9 @@ export default function Contact() {
         projects, or just to say hi!
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 sm:items-center mb-8">
+      <div className="flex flex-col sm:flex-row gap-3 sm:items-center mb-8">
         <Button
-          className="rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-200 px-6"
+          className="w-full sm:w-auto rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-200 px-6"
           asChild
         >
           <a href={`mailto:${email}`}>
@@ -64,7 +64,7 @@ export default function Contact() {
 
         <Button
           variant="outline"
-          className="rounded-full px-6 gap-2 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          className="w-full sm:w-auto rounded-full px-6 gap-2 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800"
           onClick={onCopy}
         >
           {copied ? (
@@ -83,7 +83,7 @@ export default function Contact() {
         <Button
           asChild
           variant="ghost"
-          className="rounded-full px-6 text-amber-700 dark:text-amber-500 hover:text-amber-800 dark:hover:text-amber-400 hover:bg-amber-100/50 dark:hover:bg-amber-900/20"
+          className="w-full sm:w-auto rounded-full px-6 text-amber-700 dark:text-amber-500 hover:text-amber-800 dark:hover:text-amber-400 hover:bg-amber-100/50 dark:hover:bg-amber-900/20"
         >
           <a
             href="https://lightning-dust-053.notion.site/Buy-Me-a-Coffee-The-Lazy-Way-17d72d69c0498008aa42ef7121aff3b6?source=copy_link"
@@ -96,7 +96,7 @@ export default function Contact() {
         </Button>
       </div>
 
-      <div className="flex gap-4">
+      <div className="justify-center sm:justify-start flex gap-4">
         {socialLinks.map((link) => (
           <Link
             key={link.name}

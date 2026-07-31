@@ -7,6 +7,29 @@ import { Button } from "@/components/ui/button";
 
 const experiences = [
   {
+    company: "GreyNext Software Consultancy",
+    role: "Software Development Engineer Intern",
+    period: "July 2026 - Present",
+    description: [
+      "Building and maintaining multiple microservices for scalable software solutions.",
+      "Developing AI-powered solutions, workflow automations, and backend APIs using modern development tools.",
+      "Contributing to feature development, debugging, testing, and code reviews in an Agile environment."
+    ],
+    technologies: ["Microservices", "AI", "Backend APIs", "Agile"]
+  },
+  {
+    company: "FaxLab Technologies",
+    role: "AI Intern",
+    period: "June 2026 - August 2026",
+    certificateUrl: "https://drive.google.com/file/d/1AOb-WZhwb1p9Bp74wBGxBhnTHxG7VUAY/view?usp=sharing",
+    description: [
+      "Designed and built 5+ production-ready Generative AI applications, reducing average prototyping-to-deployment time by 80% through reusable GenAI frameworks.",
+      "Explored and benchmarked 10+ LLMs, AI tools, and providers (OpenAI, Gemini, Claude, Ollama) to optimize output quality, latency, and cost by up to 40%.",
+      "Built end-to-end AI automation pipelines eliminating 80%+ of manual processing tasks, saving 15+ engineering hours per week across projects."
+    ],
+    technologies: ["Generative AI", "LLMs", "AI Workflows", "APIs"]
+  },
+  {
     company: "Starportal",
     role: "Software Development Engineer Intern",
     period: "June 2025 - August 2025",
@@ -37,7 +60,7 @@ export default function Experience() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   return (
-    <section className="mb-16">
+    <section className="mb-12">
       <h2 id="experience-heading" className="text-lg font-bold mb-6 text-black dark:text-white flex items-center gap-2">
         Experience <span className="text-zinc-400 font-normal">#</span>
       </h2>
@@ -56,17 +79,17 @@ export default function Experience() {
               <Button
                 variant="ghost"
                 onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                className="w-full h-auto flex flex-col sm:flex-row sm:items-baseline justify-between p-4 text-left cursor-pointer hover:bg-transparent"
+                className="w-full h-auto flex flex-col sm:flex-row sm:items-baseline justify-between p-4 text-left cursor-pointer hover:bg-transparent items-start"
               >
-                <div className="flex items-center gap-2">
-                  <span className="text-zinc-400 transform transition-transform duration-200" style={{ rotate: isExpanded ? "90deg" : "0deg" }}>
+                <div className="flex items-start gap-2">
+                  <span className="text-zinc-400 transform transition-transform duration-200 mt-1 flex-shrink-0" style={{ rotate: isExpanded ? "90deg" : "0deg" }}>
                     <ChevronDown size={16} />
                   </span>
-                  <h3 className="text-base sm:text-base text-sm font-semibold text-zinc-900 dark:text-zinc-100 whitespace-normal break-words ">
+                  <h3 className="text-sm sm:text-base font-semibold text-zinc-900 dark:text-zinc-100 whitespace-normal break-words">
                     {exp.role} <span className="text-zinc-500 font-normal">at</span> {exp.company}
                   </h3>
                 </div>
-                <span className="text-sm text-zinc-500 font-mono mt-1 sm:mt-0 pl-6 sm:pl-0">{exp.period}</span>
+                <span className="text-xs sm:text-sm text-zinc-500 font-mono mt-1 sm:mt-0 pl-6 sm:pl-0 flex-shrink-0">{exp.period}</span>
               </Button>
 
               <AnimatePresence>
@@ -78,7 +101,7 @@ export default function Experience() {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-4 pb-4 pl-10">
+                    <div className="px-4 pb-4 pl-6 sm:pl-10">
                       <ul className="list-disc space-y-2 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed marker:text-zinc-300 dark:marker:text-zinc-700 mb-4">
                         {exp.description.map((item, i) => (
                           <li key={i}>{item}</li>

@@ -35,10 +35,10 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between gap-4 py-2 sm:py-3 sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md">
       {/* Navigation Links */}
-      <div className="flex items-center justify-start gap-3 sm:gap-4 text-sm sm:text-base">
+      <div className="flex items-center justify-start gap-4 text-sm sm:text-base">
         <NavLink href="/">home</NavLink>
-        <NavLink href="/#projects">projects</NavLink>
         <NavLink href="/#stack">skills</NavLink>
+        <NavLink href="/#projects">projects</NavLink>
         <NavLink href="/#contact">contact</NavLink>
       </div>
     </div>

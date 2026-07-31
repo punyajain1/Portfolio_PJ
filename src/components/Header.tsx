@@ -143,7 +143,7 @@ export default function Header() {
               className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             >
               <Link
-                href="/Punya_Resume_Backend.pdf"
+                href="/Punya_Jain.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Resume"
@@ -178,8 +178,8 @@ export default function Header() {
               <path d="m23 12-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82L8.6 22.5l3.4-1.47 3.4 1.46 1.89-3.19 3.61-.82-.34-3.69L23 12zm-12.91 4.72-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z"></path>
             </svg>
 
-            <div className="md:text-xl text-lg font-[family-name:var(--font-instrument-serif)] tracking-wider dark:text-zinc-400 text-zinc-600 font-light mt-1 sm:mt-2">
-              | Delhi, India 🇮🇳
+            <div className="md:text-xl text-base sm:text-lg font-[family-name:var(--font-instrument-serif)] tracking-wider dark:text-zinc-400 text-zinc-600 font-light mt-1 sm:mt-2">
+              <span className="hidden sm:inline">| </span><span>Delhi, India 🇮🇳</span>
             </div>
           </div>
 
@@ -231,7 +231,7 @@ export default function Header() {
             className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
           >
             <Link
-              href="/Punya_Resume_Backend.pdf"
+              href="/Punya_Jain.pdf"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View Resume"
