@@ -15,7 +15,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Job Scraper Automation System",
+    title: "ApplyFlow (Job Scraper Automation System)",
     slug: "job-scraper",
     description: "Developed an automated job aggregation tool that scrapes listings from 8+ job boards (Indeed, LinkedIn, Naukri, Internshala, etc.) and delivers results via email using n8n workflow automation.",
     longDescription: [
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     thumbnail: "/thumbnails/job-scraper.png",
     links: {
       visit: "https://www.linkedin.com/posts/punya-jain-40ab8b2a6_weekendbuild-sideproject-automation-activity-7424499791511834624-8KQa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEnbeIoBRywPkBn1AHndpUOWWPCLSk-hfEU",
-      source: "https://github.com/punyajain1/JOB_SCRAPPER_TelegramBot"
+      source: "https://github.com/punyajain1/ApplyFlow"
     }
   },
   {
