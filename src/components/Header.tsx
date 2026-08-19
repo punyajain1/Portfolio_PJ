@@ -143,7 +143,7 @@ export default function Header() {
               className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             >
               <Link
-                href="/Punya_Jain.pdf"
+                href="/Punya_Jain_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Resume"
@@ -231,7 +231,7 @@ export default function Header() {
             className="rounded-full text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
           >
             <Link
-              href="/Punya_Jain.pdf"
+              href="/Punya_Jain_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View Resume"
