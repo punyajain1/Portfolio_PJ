@@ -21,7 +21,7 @@ const experiences = [
     company: "FaxLab Technologies",
     role: "AI Intern",
     period: "June 2026 - August 2026",
-    certificateUrl: "https://drive.google.com/file/d/1AOb-WZhwb1p9Bp74wBGxBhnTHxG7VUAY/view?usp=sharing",
+    certificateUrl: "https://drive.google.com/file/d/1P5zZE6ifZyDegccn5QvZ8WogIqLvB-ED/view?usp=sharing",
     description: [
       "Designed and built 5+ production-ready Generative AI applications, reducing average prototyping-to-deployment time by 80% through reusable GenAI frameworks.",
       "Explored and benchmarked 10+ LLMs, AI tools, and providers (OpenAI, Gemini, Claude, Ollama) to optimize output quality, latency, and cost by up to 40%.",
