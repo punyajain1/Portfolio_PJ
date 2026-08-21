@@ -22,7 +22,7 @@ export default async function Image() {
         }}
       >
         <p style={{ color: '#888', fontSize: 24, margin: '0 0 16px' }}>
-          jainsahab.tech
+          punyajain.me
         </p>
         <h1
           style={{

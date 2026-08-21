@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://jainsahab.tech/sitemap.xml',
-    host: 'https://jainsahab.tech',
+    sitemap: 'https://www.punyajain.me/sitemap.xml',
+    host: 'https://www.punyajain.me',
   }
 }

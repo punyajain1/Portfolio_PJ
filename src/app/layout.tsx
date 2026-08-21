@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jainsahab.tech'),
+  metadataBase: new URL('https://www.punyajain.me'),
 
   title: {
     default: 'Punya Jain | Full-Stack & AI Developer',
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'Punya Jain — CS undergrad from Delhi building AI-powered tools, automation bots, and full-stack apps with Next.js, TypeScript, and Node.js. Open to collaborations.',
   keywords: [
     'Punya Jain',
+    'punyajain.me',
     'jainsahab.tech',
     'portfolio',
     'full-stack developer',
@@ -27,13 +28,13 @@ export const metadata: Metadata = {
     'Node.js developer',
     'automation engineer',
   ],
-  authors: [{ name: 'Punya Jain', url: 'https://jainsahab.tech' }],
+  authors: [{ name: 'Punya Jain', url: 'https://www.punyajain.me' }],
   creator: 'Punya Jain',
 
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://jainsahab.tech',
+    url: 'https://www.punyajain.me',
     siteName: 'Punya Jain Portfolio',
     title: 'Punya Jain | Full-Stack & AI Developer',
     description:
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://jainsahab.tech',
+    canonical: 'https://www.punyajain.me',
   },
 
   icons: {
@@ -93,11 +94,11 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Punya Jain',
-  url: 'https://jainsahab.tech',
+  url: 'https://www.punyajain.me',
   jobTitle: 'Full-Stack & AI Developer',
   description:
     'CS undergrad from Delhi building AI tools, automation bots, and full-stack apps with Next.js, TypeScript, and Node.js.',
-  image: 'https://jainsahab.tech/punya_2.jpg',
+  image: 'https://www.punyajain.me/punya_2.jpg',
   email: 'punyajain1@gmail.com',
   sameAs: [
     'https://github.com/punyajain1',
