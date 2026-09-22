@@ -7,9 +7,22 @@ import { Button } from "@/components/ui/button";
 
 const experiences = [
   {
+    company: "Fujitsu Consulting India Private Limited",
+    role: "Software Development Engineer Intern",
+    period: "June 2026 - August 2026",
+    certificateUrl: "https://drive.google.com/file/d/1-nZSNjo1ifggxAg0AFwafmeUs_PhyGfn/view?usp=sharing",
+    description: [
+      "Built a 5-endpoint FastAPI microservice (2,170 lines of Python) automating the full cycle of code analysis → LLM test generation → subprocess validation, containerized via a Docker.",
+      "Engineered a batch LLM test generation system generating pytest tests for an entire file in a single API call, governed by a 372-line prompt with 22 explicit guardrails blocking 7+ categories of LLM hallucination.",
+      "Built an AI-powered failure analysis loop and a 541-line test validator with a custom import hook, failing tracebacks are auto diagnosed by LLM.",
+      "Achieved 34 automated tests passing with 0 failures across 4 modules, and validated the system end-to-end on a real external repo: 28 tests across 14 functions, reaching 83% code coverage automatically."
+    ],
+    technologies: []
+  },
+  {
     company: "GreyNext Software Consultancy",
     role: "Software Development Engineer Intern",
-    period: "July 2026 - Present",
+    period: "July 2026 - September 2026",
     description: [
       "Building and maintaining multiple microservices for scalable software solutions.",
       "Developing AI-powered solutions, workflow automations, and backend APIs using modern development tools.",
