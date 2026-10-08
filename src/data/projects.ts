@@ -15,6 +15,41 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Beacon",
+    slug: "beacon",
+    description: "An AI-powered financial portfolio management and market intelligence platform combining real-time market data, sentiment analysis, and LLM reasoning.",
+    longDescription: [
+      "Beacon is an AI-powered financial portfolio management and market intelligence platform. It combines real-time market data, financial-news sentiment analysis, technical indicators, and large-language-model reasoning to help users monitor cryptocurrency and precious-metal portfolios.",
+      "The platform includes portfolio tracking, AI recommendations, a contextual financial chatbot, real-time news streaming, market sentiment analysis, and interactive dashboards.",
+      "Market Dashboard & Portfolio: Tracks user-entered asset holdings, calculating real-time P/L by diffing current prices against Postgres buying prices. Visualizes total portfolio value, 24h market volume, and an active Fear & Greed Index gauge.",
+      "Global News Stream: Listens to a live WebSocket for breaking global news. Automatically calculates the macro sentiment split of the overall market using FinBERT. Includes an interactive AI summary tool.",
+      "AI Recommendations: Displays the results of the RAG pipeline. Shows advanced indicators (MACD line, signal, histogram, Bollinger Band bounds, 7D Moving Average, Volatility) and the AI's exact reasoning bullets alongside an action conviction score.",
+      "Derivatives & Liquidation Tracker: Queries Futures APIs for Funding Rates, Open Interest, and Long/Short Ratios. Calculates a proprietary 'Liquidation Heat' score to warn users of impending long or short squeezes.",
+      "India Crypto Hub: A localized arbitrage and tax tool for Indian users, measuring the 'India Premium' gap and providing a tax-aware sell preview.",
+      "DCA Simulator: Allows users to backtest Dollar Cost Averaging strategies, query historical market data, calculate exact buy points, and render precise charts comparing 'Total Invested' to 'Actual Portfolio Value'."
+    ],
+    features: [
+      "AI-powered financial chatbot using Groq GPT-OSS 120B with time-based RAG",
+      "Real-time market news streaming via SSE/WebSockets",
+      "Financial-news sentiment analysis using Hugging Face FinBERT",
+      "Automated portfolio recommendations (BUY/SELL/HOLD) with confidence scores",
+      "Interactive dashboards with React, Tailwind CSS, and Recharts",
+      "Derivatives tracker with proprietary Liquidation Heat score",
+      "India Crypto Hub (Premium tracking & 30% crypto tax calculator)",
+      "Dollar Cost Averaging (DCA) Strategy Simulator"
+    ],
+    technologies: [
+      "TypeScript", "Next.js", "React", "Node.js", "Express", "PostgreSQL",
+      "Prisma", "Groq SDK", "Hugging Face FinBERT", "WebSockets/SSE",
+      "Tailwind CSS", "Recharts"
+    ],
+    thumbnail: "/thumbnails/Beacon.png",
+    links: {
+      visit: "https://joinbeacon.vercel.app/",
+      source: "https://github.com/punyajain1/Beacon"
+    }
+  },
+  {
     title: "ApplyFlow (Job Scraper Automation System)",
     slug: "job-scraper",
     description: "Developed an automated job aggregation tool that scrapes listings from 8+ job boards (Indeed, LinkedIn, Naukri, Internshala, etc.) and delivers results via email using n8n workflow automation.",
@@ -38,30 +73,6 @@ export const projects: Project[] = [
     links: {
       visit: "https://www.linkedin.com/posts/punya-jain-40ab8b2a6_weekendbuild-sideproject-automation-activity-7424499791511834624-8KQa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEnbeIoBRywPkBn1AHndpUOWWPCLSk-hfEU",
       source: "https://github.com/punyajain1/ApplyFlow"
-    }
-  },
-  {
-    title: "FinPilot",
-    slug: "finpilot",
-    description: "A scalable AI-based financial advisory backend delivering portfolio analysis, market news aggregation, and sentiment scoring.",
-    longDescription: [
-      "FinPilot is an AI-based financial advisory backend built with Node.js, Express, TypeScript, and PostgreSQL.",
-      "It delivers advanced portfolio analysis, real-time market news aggregation, and sophisticated sentiment scoring.",
-      "Integrates an AI chatbot powered by Llama to provide smart investment insights specifically focused on crypto and metals."
-    ],
-    features: [
-      "AI-powered financial advisory and portfolio analysis",
-      "Real-time market news aggregation",
-      "Sentiment scoring for investments",
-      "Llama-powered AI chatbot integration",
-      "Focus on crypto and metals markets",
-      "Scalable backend architecture"
-    ],
-    technologies: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Llama AI"],
-    thumbnail: "/thumbnails/Finpilot.png",
-    links: {
-      visit: "https://fin-pilot-backend-api.vercel.app/",
-      source: "https://github.com/punyajain1/FinPilot-Backend-API"
     }
   },
   {
