@@ -58,7 +58,12 @@ export const projects: Project[] = [
       "The tool scrapes positions from 8 different job boards including global platforms (Indeed, LinkedIn, Glassdoor) and India-specific sites (Naukri, Internshala), processes the data, and sends formatted CSV reports via SMTP integration with n8n workflow automation.",
       "Optimized for entry-level positions with multi-site concurrent scraping and configurable search parameters including location, job type, and remote filter options.",
       "Implemented SSL/TLS handling for macOS compatibility and local JSON backup system for data persistence.",
-      "Integrated n8n webhook automation for seamless workflow orchestration and SMTP email delivery with CSV attachments."
+      "Integrated n8n webhook automation for seamless workflow orchestration and SMTP email delivery with CSV attachments.",
+      "The backend includes a highly resilient custom ATS Discovery Engine designed to fetch jobs directly from company career pages, bypassing traditional job boards altogether.",
+      "Company List (companies.txt): You provide a list of company names or direct career page URLs.",
+      "Auto-Detection: The engine automatically visits the company's website and scans the HTML for known Applicant Tracking Systems (ATS). It currently detects over 30 platforms including Greenhouse, Lever, Ashby, Workday, SmartRecruiters, Eightfold, Taleo, and more.",
+      "Direct API Extraction: Once the ATS and the company's unique 'slug' (tenant ID) are identified, the engine bypasses standard web scraping. Instead, it directly queries the ATS provider's public JSON APIs (e.g., api.lever.co/v0/postings/... or boards-api.greenhouse.io/...).",
+      "Reliability: Because it reads structured JSON data directly from the ATS backend, this method is highly reliable and immune to UI changes, CAPTCHAs, and rate limits that typically break standard web scrapers."
     ],
     features: [
       "Multi-platform concurrent job scraping (8+ job boards)",
@@ -66,7 +71,10 @@ export const projects: Project[] = [
       "SMTP email delivery with CSV attachments",
       "Configurable search parameters (location, job type, remote filter)",
       "SSL/TLS handling for macOS compatibility",
-      "Local JSON backup system"
+      "Local JSON backup system",
+      "Custom ATS Discovery Engine for direct career page fetching",
+      "Auto-Detection of 30+ ATS platforms (Greenhouse, Lever, Workday, etc.)",
+      "Direct API Extraction bypassing traditional web scraping"
     ],
     technologies: ["n8n", "Python", "BeautifulSoup4", "TLS-client", "JobSpy", "Pandas", "NumPy", "Requests", "urllib3", "SMTP", "Pydantic", "python-dotenv"],
     thumbnail: "/thumbnails/job-scraper.png",
@@ -230,6 +238,28 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "Bolt Clone",
+    slug: "bolt-clone",
+    description: "An AI-powered website builder that generates fully functional websites based on user prompts.",
+    longDescription: ["An AI-powered website builder that generates fully functional websites based on user prompts.", "Utilizes OpenAI’s API and custom prompting techniques to create tailored website designs and content.", "React and TypeScript ensure a dynamic, interactive frontend, while Express and Node.js handle backend processing.", "Designed for scalability, allowing users to generate anything from landing pages to full-fledged applications."],
+    features: [
+      "AI-powered website generation from prompts",
+      "OpenAI API integration with custom prompting",
+      "Automated design and content creation",
+      "Support for landing pages to full applications",
+      "Dynamic TypeScript frontend",
+      "Scalable architecture for various project types"
+    ],
+    technologies: [
+      "React", "TypeScript", "Express", "Node.js", "OpenAI"
+    ],
+    thumbnail: "/thumbnails/bolt_clone.png",
+    links: {
+      visit: "",
+      source: "https://github.com/punyajain1/Bolt_Clone"
+    }
+  },
+  {
     title: "Brainly",
     slug: "brainly",
     description: "A Full Stack web application helps user to save any important link or content at one place for easy access.",
@@ -293,28 +323,6 @@ export const projects: Project[] = [
     links: {
       visit: "https://youtu.be/MFDYUBucMAM",
       source: ""
-    }
-  },
-  {
-    title: "Bolt Clone",
-    slug: "bolt-clone",
-    description: "An AI-powered website builder that generates fully functional websites based on user prompts.",
-    longDescription: ["An AI-powered website builder that generates fully functional websites based on user prompts.", "Utilizes OpenAI’s API and custom prompting techniques to create tailored website designs and content.", "React and TypeScript ensure a dynamic, interactive frontend, while Express and Node.js handle backend processing.", "Designed for scalability, allowing users to generate anything from landing pages to full-fledged applications."],
-    features: [
-      "AI-powered website generation from prompts",
-      "OpenAI API integration with custom prompting",
-      "Automated design and content creation",
-      "Support for landing pages to full applications",
-      "Dynamic TypeScript frontend",
-      "Scalable architecture for various project types"
-    ],
-    technologies: [
-      "React", "TypeScript", "Express", "Node.js", "OpenAI"
-    ],
-    thumbnail: "/thumbnails/bolt_clone.png",
-    links: {
-      visit: "",
-      source: "https://github.com/punyajain1/Bolt_Clone"
     }
   }
 ];
